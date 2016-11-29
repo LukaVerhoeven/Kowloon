@@ -1,0 +1,391 @@
+@charset 'utf-8';
+//Testdata///
+$testcolor : rgb(228, 10, 10);
+$total: 3;
+$step: 360deg / $total;
+// div{
+//   background-color: $testcolor;
+// }
+// @for $i from 1 through $total {
+//   div:nth-child(#{$i}) {
+//     background: adjust-hue(blue, $i * $step);
+//    }
+// }
+
+/////////fonts ////////
+@font-face {
+font-family: ChoplinLight;
+src: url("/fonts/3290D7_0_0.eot") format("eot"),
+     url("/fonts/3290D7_0_0.ttf") format("ttf"),
+     url("/fonts/3290D7_0_0.woff") format("woff"),
+     url("/fonts/3290D7_0_0.woff2") format("woff2");
+}
+@font-face {
+font-family: ChoplinMedium;
+src: url("/fonts/3290DE_0_0.eot") format("eot"),
+     url("/fonts/3290DE_0_0.ttf") format("ttf"),
+     url("/fonts/3290DE_0_0.woff") format("woff"),
+     url("/fonts/3290DE_0_0.woff2") format("woff2");
+}
+///////// variables //////////
+
+//divs
+$sidebar-width: 4.694419840566874%;
+$extra-sidebar-width: 17.116917626217894%;
+$header-width: 95.30558015943313%;
+$content-width: 74.30558015943313%;
+$content-height: 68.2vw;
+$header-height: 36.6vw;
+$totalheight: 107vw;
+
+//colors
+$sidebar-backgroundcolor: #323232;
+$content-backgroundcolor: #454545;
+$content-textcolor: #cecece;
+$cathegory-border-color: #616161;
+$hot-item-tile-color: #565656;
+$hot-item-tile-border-color: #717171;
+$newsletter-form-color: #5f5f5f;
+
+//img
+$header-img: url("/img/hond.png");
+$menu-burger-img: url("/img/menu-burger.png");
+$menu-search-img: url("/img/menu-search.png");
+$menu-ask-img: url("/img/menu-ask.png");
+$menu-dog-img: url("/img/menu-dog.png");
+$menu-cat-img: url("/img/menu-cat.png");
+$menu-fish-img: url("/img/menu-fish.png");
+$menu-bird-img: url("/img/menu-bird.png");
+$menu-rat-img: url("/img/menu-rat.png");
+$menu-k-grey-img:  url("/img/K-grey.png");
+$menu-kowloon-grey-img: url("/img/Kowloon.png");
+$newsletter-image: url("/img/add-bg.jpg");
+
+//groups
+$type-scale: (
+  intro: 15pt,               // small text lorem ipsum
+  cathegory-small: 1vw,      // small + other animals
+  cathegory-big: 1.4vw,      // cathegory text
+  title: 2.95vw              // hot-items title
+);
+
+$heights: (
+  sidebar-line: 0px,
+  cathegory-line: 10%,
+);
+
+$widths: (
+  sidebar-open-icon-width:27%,
+  sidebar-open-line-width:85%,
+  header-img-width:22.6%,
+  cathegory-list-width:16.5%,
+  cathegory-a-width: 99%,           // is voor left-border
+  cathegory-img-width:80%,
+  hot-items-list-width:24%,
+  hot-item-img-width:96.6%,
+);
+///////////  mixin //////////////
+@mixin margin($margin) { // top right bottom left
+  margin: $margin;
+}
+
+///////////parameters//////////////
+@import "parameters/parameters.scss";
+/////////// features ///////////
+.hidden{
+  display: none;
+}
+//////////// Divs ////////////////
+html{
+
+  font-family: Arial;
+}
+body{
+  @extend %nomargin;
+  @extend %fullpagelenght;
+  @extend %fullwidth;
+  display: inline-block;
+
+}
+.header{
+  @extend %relative;
+  @extend %floatleft;
+  @extend %fullbackground;
+  width: $header-width;
+  height: $header-height;
+  background-image: $header-img;
+}
+.content{
+  @extend %relative;
+  @extend %floatleft;
+  @extend %inlineblock;
+  width: $content-width;
+  min-height: $content-height;
+  background-color: $content-backgroundcolor;
+  padding:42px 10.5% 0% 10.5%;
+  & div{
+    @extend %centertext;
+    color: $content-textcolor;
+
+  }
+}
+/////////// ul /////////////////
+.sidebar ul, .catergory-content{
+  @extend %nopadding;
+  @extend %nomargin;
+  @extend %nostyle-ul;
+}
+//////////sidebar///////////
+.full-sidebar{
+  @extend %absolute;
+  @extend %fullpagelenght;
+  @extend %fullwidth;
+  z-index: 1;
+}
+.sidebar{
+  @extend %relative;
+  @extend %floatleft;
+  @extend %fullheight;
+  width:$sidebar-width;
+  background-color: $sidebar-backgroundcolor;
+  &:last-child{
+    @extend %absolute;
+    width: $extra-sidebar-width;
+    & a{
+      width: map-get($widths, sidebar-open-icon-width);
+    }
+  }
+
+    li{
+      @extend %menusize;
+    }
+    .line{
+      @include margin(1.4vw 0px 1.4vw 7.5%);
+      width: map-get($widths, sidebar-open-line-width);
+      height: map-get($heights, sidebar-line);
+      border-bottom: 2px solid $content-backgroundcolor;
+    }
+
+}
+.menu{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-burger-img;
+}
+.search{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-search-img;
+  margin-top: 10px;
+}
+.ask{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-ask-img;
+}
+
+.dog{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-dog-img;
+}
+.cat{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-cat-img;
+}
+.fish{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-fish-img;
+}
+.bird{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-bird-img;
+}
+.rats{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-rat-img;
+}
+.kowloon-menu{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  @extend %absolute;
+  background-image: $menu-k-grey-img;
+  bottom: 0px;
+}
+.full-kowloon{
+  background-image: $menu-kowloon-grey-img;
+}
+/////////// Header  ///////////
+.header img{
+  @extend %auto-margin;
+  @extend %block;
+  margin-top: 3%;
+  width: map-get($widths, header-img-width);
+}
+/////////// Content ///////////
+//////////text /////////
+.text{
+  @include margin(0px 10% 0px 10%);
+  font-size: map-get($type-scale, intro);
+}
+//////// cathegory //////
+.catergory-content{
+  @extend %fullwidth;
+  @extend %inlineblock;
+  margin-top: 2%;
+  li{
+    @extend %floatleft;
+    @extend %block;
+    width: map-get($widths, cathegory-list-width);
+    a{
+      @extend %no-text-decoration;
+      @extend %inlineblock;
+      @extend %fullheight;
+      width: map-get($widths, cathegory-a-width);
+    }
+    img{
+      max-width: map-get($widths, cathegory-img-width);
+    }
+    p{
+      @extend %centertext;
+      @extend %colorwhite;
+      font-size: map-get($type-scale, cathegory-big);
+      font-family: ChoplinLight;
+      margin-top: 4%;
+      .small-text{
+        @include margin(0px 20% 0px 20%);
+      }
+      &.other-text, &.small-p{
+        font-size: map-get($type-scale, cathegory-small);
+      }
+      &.small-p{
+        margin-top: 0px;
+      }
+    }
+    .cathegory-line{
+      @extend %inlineblock;
+      @extend %absolute;
+       border-left: 1px solid $cathegory-border-color;
+       margin-top: 2%;
+       height: map-get($heights, cathegory-line);
+    }
+
+  }
+}
+//////// hot-items ///////
+.hot-items{
+    @extend %inlineblock;
+    @extend %fullwidth;
+    margin-bottom: 5%;
+  h1{
+    @extend %colorwhite;
+    @extend %alignleft;
+    @extend %choplinmedium;
+    font-size: map-get($type-scale, title);
+    font-weight:lighter;
+    margin-bottom: 1%;
+  }
+  .visit{
+    @extend %colorwhite;
+    @extend %choplinmedium;
+    @extend %floatright;
+    margin-right: 2%;
+  }
+}
+
+.hot-item-list{
+  @extend %nostyle-ul;
+  @extend %floatleft;
+  @extend %inlineblock;
+  @extend %fullwidth;
+  @extend %nopadding;
+  height: 100%;
+
+  li{
+    @extend %inlineblock;
+    @extend %center-background-image;
+    @extend %fullbackground;
+    @extend %floatleft;
+    @extend %fullheight;
+    width: map-get($widths, hot-items-list-width);
+    margin-right: 0.5%;
+    background-color: $hot-item-tile-color;
+    border: 1px solid $hot-item-tile-border-color;
+    img{
+      margin-top: 2%;
+      width: map-get($widths,   hot-item-img-width);
+    }
+    p{
+      @extend %floatleft;
+      @extend %alignleft;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 90%;
+      font-weight: bold;
+      .prijs{
+        @extend %floatright;
+        font-weight: normal;
+      }
+    }
+  }
+}
+/////////// newsletter ////////
+.newsletter{
+  @extend %inlineblock;
+  @extend %fullwidth;
+  div{
+    @extend %floatleft;
+    @extend %fullheight;
+    &.news-img{
+      @extend %fullbackground;
+      width: 70%;
+      background-image:$newsletter-image;
+      h2{
+        @extend %colorwhite;
+        @extend %auto-margin;
+        font-size: 3.06vw;
+        margin-top: 5%;
+        width: 60%;
+      }
+      h4{
+        @extend %colorwhite;
+        margin-bottom: 2%;
+      }
+    }
+    &.news-form{
+      background-color:$newsletter-form-color;
+      width: 30%;
+    }
+  }
+}

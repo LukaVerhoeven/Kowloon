@@ -1,0 +1,76 @@
+////// positioning  //////
+%relative{
+  position: relative;
+}
+%absolute{
+  position: absolute;
+}
+%block{
+  display: block;
+}
+%inlineblock{
+  display: inline-block;
+}
+%floatleft{
+  float: left;
+}
+%floatright{
+  float: right;
+}
+//////// distance //////
+%nomargin{
+  margin: 0px;
+}
+%auto-margin{
+  margin: auto;
+}
+%nopadding{
+  padding: 0px;
+}
+%fullheight{
+  height: 100%;
+}
+%fullwidth{
+  width: 100%;
+}
+%fullpagelenght{
+  height: $totalheight;
+}
+%menusize{
+  width:100%;
+  height: 4vw;
+}
+
+//////// text ///////
+
+%centertext{
+  text-align: center;
+}
+%alignleft{
+  text-align: left;
+}
+%no-text-decoration{
+  text-decoration: none;
+}
+
+/////// image //////
+%fullbackground{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+%center-background-image{
+  background-position: center;
+}
+
+/////// style //////
+%colorwhite{
+  color: white;
+}
+%nostyle-ul{
+  list-style: none;
+}
+
+/////// fonts //////
+%choplinmedium{
+  font-family: ChoplinMedium;
+}
