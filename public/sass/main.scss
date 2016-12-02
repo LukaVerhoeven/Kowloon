@@ -32,11 +32,9 @@ src: url("/fonts/3290DE_0_0.eot") format("eot"),
 //divs
 $sidebar-width: 4.694419840566874%;
 $extra-sidebar-width: 17.116917626217894%;
-$header-width: 95.30558015943313%;
-$content-width: 74.30558015943313%;
-$content-height: 68.2vw;
 $header-height: 36.6vw;
-$totalheight: 107vw;
+$main-width: 95.30558015943313%;
+
 
 //colors
 $sidebar-backgroundcolor: #323232;
@@ -46,24 +44,28 @@ $cathegory-border-color: #616161;
 $hot-item-tile-color: #565656;
 $hot-item-tile-border-color: #717171;
 $newsletter-form-color: #5f5f5f;
+$newsletter-input-border-color: #9a9a9a;
 
 //img
 $header-img: url("/img/hond.png");
-$menu-burger-img: url("/img/menu-burger.png");
-$menu-search-img: url("/img/menu-search.png");
-$menu-ask-img: url("/img/menu-ask.png");
-$menu-dog-img: url("/img/menu-dog.png");
-$menu-cat-img: url("/img/menu-cat.png");
-$menu-fish-img: url("/img/menu-fish.png");
-$menu-bird-img: url("/img/menu-bird.png");
-$menu-rat-img: url("/img/menu-rat.png");
+$menu-sprite-img: url("/img/menu-sprite.png");
+$homepage-sprite-img: url("/img/homepagesprite.png");
+$menu-burger-position: 100%;
+$menu-search-position: 14.28%;
+$menu-ask-position: 0%;
+$menu-dog-position: 28.57%;
+$menu-cat-position: 85.72%;
+$menu-fish-position: 57.12%;
+$menu-bird-position: 85.68%;
+
+$menu-rat-position: 42.84%;
 $menu-k-grey-img:  url("/img/K-grey.png");
 $menu-kowloon-grey-img: url("/img/Kowloon.png");
 $newsletter-image: url("/img/add-bg.jpg");
 
 //groups
 $type-scale: (
-  intro: 15pt,               // small text lorem ipsum
+  intro: 1.05vw,               // small text lorem ipsum
   cathegory-small: 1vw,      // small + other animals
   cathegory-big: 1.4vw,      // cathegory text
   title: 2.95vw              // hot-items title
@@ -71,7 +73,7 @@ $type-scale: (
 
 $heights: (
   sidebar-line: 0px,
-  cathegory-line: 10%,
+  cathegory-line: 9%,
 );
 
 $widths: (
@@ -81,7 +83,7 @@ $widths: (
   cathegory-list-width:16.5%,
   cathegory-a-width: 99%,           // is voor left-border
   cathegory-img-width:80%,
-  hot-items-list-width:24%,
+  hot-items-list-width:24.2%,
   hot-item-img-width:96.6%,
 );
 ///////////  mixin //////////////
@@ -95,23 +97,29 @@ $widths: (
 .hidden{
   display: none;
 }
-//////////// Divs ////////////////
-html{
+//////////// Divs layout ////////////////
 
+html{
   font-family: Arial;
 }
 body{
   @extend %nomargin;
-  @extend %fullpagelenght;
   @extend %fullwidth;
-  display: inline-block;
+  display: flex;
+  table-layout: fixed;
+}
+.main{
+  width: $main-width;
+}
+.main, .sidebar{
+  display: table-cell;
 
 }
 .header{
   @extend %relative;
   @extend %floatleft;
   @extend %fullbackground;
-  width: $header-width;
+  @extend %fullwidth;
   height: $header-height;
   background-image: $header-img;
 }
@@ -119,10 +127,8 @@ body{
   @extend %relative;
   @extend %floatleft;
   @extend %inlineblock;
-  width: $content-width;
-  min-height: $content-height;
   background-color: $content-backgroundcolor;
-  padding:42px 10.5% 0% 10.5%;
+  padding:42px 10.5% 7.5% 10.5%;
   & div{
     @extend %centertext;
     color: $content-textcolor;
@@ -138,19 +144,18 @@ body{
 //////////sidebar///////////
 .full-sidebar{
   @extend %absolute;
-  @extend %fullpagelenght;
-  @extend %fullwidth;
+  width: $extra-sidebar-width;
   z-index: 1;
 }
 .sidebar{
   @extend %relative;
   @extend %floatleft;
-  @extend %fullheight;
   width:$sidebar-width;
   background-color: $sidebar-backgroundcolor;
   &:last-child{
     @extend %absolute;
-    width: $extra-sidebar-width;
+    @extend %fullwidth;
+    @extend %fullheight;
     & a{
       width: map-get($widths, sidebar-open-icon-width);
     }
@@ -173,7 +178,9 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-burger-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-burger-position;
+
 }
 .search{
   @extend %fullwidth;
@@ -181,7 +188,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-search-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-search-position;
   margin-top: 10px;
 }
 .ask{
@@ -190,7 +198,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-ask-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-ask-position;
 }
 
 .dog{
@@ -199,7 +208,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-dog-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-dog-position;
 }
 .cat{
   @extend %fullwidth;
@@ -207,7 +217,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-cat-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-cat-position;
 }
 .fish{
   @extend %fullwidth;
@@ -215,7 +226,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-fish-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-fish-position;
 }
 .bird{
   @extend %fullwidth;
@@ -223,7 +235,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-bird-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-bird-position;
 }
 .rats{
   @extend %fullwidth;
@@ -231,7 +244,8 @@ body{
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-rat-img;
+  background-image: $menu-sprite-img;
+  background-position: $menu-rat-position;
 }
 .kowloon-menu{
   @extend %fullwidth;
@@ -263,16 +277,21 @@ body{
 .catergory-content{
   @extend %fullwidth;
   @extend %inlineblock;
-  margin-top: 2%;
+  height: 11vw;
+  margin-top: 1%;
   li{
     @extend %floatleft;
     @extend %block;
+    @extend %fullheight;
     width: map-get($widths, cathegory-list-width);
     a{
-      @extend %no-text-decoration;
-      @extend %inlineblock;
+      height: 62%;
+      @extend %fullwidth;
       @extend %fullheight;
-      width: map-get($widths, cathegory-a-width);
+      @extend %block;
+      @extend %fullbackground;
+      @extend %floatleft;
+      background-image: $homepage-sprite-img;
     }
     img{
       max-width: map-get($widths, cathegory-img-width);
@@ -280,17 +299,20 @@ body{
     p{
       @extend %centertext;
       @extend %colorwhite;
+      @extend %floatleft;
+      @extend %fullwidth;
       font-size: map-get($type-scale, cathegory-big);
       font-family: ChoplinLight;
-      margin-top: 4%;
+      text-align: center;
+      padding-top: 50%;
       .small-text{
         @include margin(0px 20% 0px 20%);
       }
       &.other-text, &.small-p{
         font-size: map-get($type-scale, cathegory-small);
       }
-      &.small-p{
-        margin-top: 0px;
+      &.other-text{
+        margin-top: 12%;
       }
     }
     .cathegory-line{
@@ -303,11 +325,29 @@ body{
 
   }
 }
+.dog-content{
+  background-position: 62%;
+}
+.cat-content{
+  background-position: 82%;
+}
+.fish-content{
+  background-position: 39%;
+}
+.bird-content{
+  background-position: 104%;
+}
+.rat-content{
+  background-position: 17%;
+}
+.other-content{
+  background-position: -4%;
+}
 //////// hot-items ///////
 .hot-items{
     @extend %inlineblock;
     @extend %fullwidth;
-    margin-bottom: 5%;
+    margin-bottom: 3.3%;
   h1{
     @extend %colorwhite;
     @extend %alignleft;
@@ -330,8 +370,11 @@ body{
   @extend %inlineblock;
   @extend %fullwidth;
   @extend %nopadding;
-  height: 100%;
-
+  height: 15vw;
+  margin-top: 2%;
+  li:last-of-type{
+    margin-right: 0%;
+  }
   li{
     @extend %inlineblock;
     @extend %center-background-image;
@@ -342,13 +385,17 @@ body{
     margin-right: 0.5%;
     background-color: $hot-item-tile-color;
     border: 1px solid $hot-item-tile-border-color;
+
     img{
       margin-top: 2%;
+      height: 80%;
       width: map-get($widths,   hot-item-img-width);
     }
     p{
       @extend %floatleft;
       @extend %alignleft;
+      margin-top: 1.5%;
+      font-size:1.2vw;
       margin-left: 5%;
       margin-right: 5%;
       width: 90%;
@@ -364,28 +411,69 @@ body{
 .newsletter{
   @extend %inlineblock;
   @extend %fullwidth;
+  height: 14vw;
   div{
     @extend %floatleft;
     @extend %fullheight;
     &.news-img{
       @extend %fullbackground;
-      width: 70%;
+      width: 63%;
       background-image:$newsletter-image;
       h2{
         @extend %colorwhite;
         @extend %auto-margin;
-        font-size: 3.06vw;
-        margin-top: 5%;
+        @extend %choplinmedium;
+        font-weight: lighter;
+        line-height: 100%;
+        font-size: 3.1vw;
+        margin-top: 5.8%;
         width: 60%;
       }
       h4{
         @extend %colorwhite;
+        @extend %choplinlight;
+        font-weight: bolder;
+        font-size: 1.5vw;
         margin-bottom: 2%;
+        margin-top: 5%;
       }
     }
     &.news-form{
+      @extend %alignleft;
+      @extend %fullheight;
       background-color:$newsletter-form-color;
-      width: 30%;
+      width: 33%;
+      padding-left: 3%;
+
+      h3{
+        @extend %colorwhite;
+        font-weight: lighter;
+        font-size: 1.4vw;
+        margin-top: 12%;
+        margin-bottom: 1%;
+      }
+      p{
+        font-size: 0.97vw;
+        margin-top: 1%;
+        margin-bottom: 6%;
+      }
+      input{
+        font-size: 1.1vw;
+        padding: 4%;
+        margin-bottom: 5%;
+        @extend %floatleft;
+        &:first-of-type{
+          border: 2px solid $newsletter-input-border-color;
+        }
+        &:last-of-type{
+          @extend %colorwhite;
+          background-color: $sidebar-backgroundcolor;
+          padding: 4.7% 4% 4.7% 4%;
+          border: 0px;
+
+        }
+      }
+
     }
   }
 }

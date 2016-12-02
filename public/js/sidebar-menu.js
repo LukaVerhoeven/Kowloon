@@ -6,3 +6,10 @@ if ($( ".full-sidebar" ).hasClass( "hidden" )) {
 }
 
 })
+
+var pageheight = $('body').height()
+  $('.full-sidebar').css('height', pageheight);
+$( window ).resize(function() {
+  var pageheight = $('body').height()
+    $('.full-sidebar').css('height', pageheight);
+});

@@ -13,6 +13,7 @@
 
     </head>
     <body>
+
       <div class="sidebar">
         <ul>
           <li><a href="#" class="menu"></a></li>
@@ -51,6 +52,7 @@
           </ul>
         </div>
       </div>
+      <div class="main">
       <div class="header">
         <img src="/img/kowloonLogo.png" alt="kowloon Logo">
 
@@ -61,12 +63,12 @@
         </div>
         <div class="icons">
           <ul class="catergory-content">
-            <li><a href="#" class="dog-content"><img src="/img/dog.png" alt=""><p>DOGS</p></a><span class="cathegory-line"></span></li>
-            <li><a href="#" class="cat-content"><img src="/img/cat.png" alt=""><p>CATS</p></a><span class="cathegory-line"></span></li>
-            <li><a href="#" class="fish-content"><img src="/img/fish.png" alt=""><p>FISH</p></a><span class="cathegory-line"></span></li>
-            <li><a href="#" class="bird-content"><img src="/img/bird.png" alt=""><p>BIRDS</p></a><span class="cathegory-line"></span></li>
-            <li><a href="#" class="rat-content"><img src="/img/rat.png" alt=""><p class="small-p"><span class="small-text">SMALL</span> ANIMALS</p></a><span class="cathegory-line"></span></li>
-            <li><a href="#" class="other-content"><img src="/img/other.png" alt=""><p class="other-text">OTHER</p></a></li>
+            <li><a href="#" class="dog-content"><p>DOGS</p></a><span class="cathegory-line"></span></li>
+            <li><a href="#" class="cat-content"><p>CATS</p></a><span class="cathegory-line"></span></li>
+            <li><a href="#" class="fish-content"><p>FISH</p></a><span class="cathegory-line"></span></li>
+            <li><a href="#" class="bird-content"><p>BIRDS</p></a><span class="cathegory-line"></span></li>
+            <li><a href="#" class="rat-content"><p class="small-p"><span class="small-text">SMALL</span> ANIMALS</p></a><span class="cathegory-line"></span></li>
+            <li><a href="#" class="other-content"><p class="other-text">OTHER</p></a></li>
 
           </ul>
 
@@ -83,17 +85,18 @@
         </div>
         <div class="newsletter">
           <div class="news-img">
-            <h2>Discover amazing Knowloon deals!</h2>
+            <h2>discover amazing Knowloon deals!</h2>
             <h4>only in our newsletter</h4>
           </div>
           <div class="news-form">
             <h3>Subscribe to our newsletter</h3>
             <p>Lorum ipsum dolor sit amet..</p>
-            <input type="text" name="" value="">
-            <input type="submit" name="" value="">
+            <input type="text" name="" value="Domain @ name.com">
+            <input type="submit" name="" value="OK">
           </div>
 
         </div>
+      </div>
       </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       	<script src="/js/sidebar-menu.js"></script>

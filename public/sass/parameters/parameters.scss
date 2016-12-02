@@ -33,9 +33,6 @@
 %fullwidth{
   width: 100%;
 }
-%fullpagelenght{
-  height: $totalheight;
-}
 %menusize{
   width:100%;
   height: 4vw;
@@ -52,7 +49,9 @@
 %no-text-decoration{
   text-decoration: none;
 }
-
+%colorwhite{
+  color: white;
+}
 /////// image //////
 %fullbackground{
   background-repeat: no-repeat;
@@ -63,9 +62,7 @@
 }
 
 /////// style //////
-%colorwhite{
-  color: white;
-}
+
 %nostyle-ul{
   list-style: none;
 }
@@ -73,4 +70,7 @@
 /////// fonts //////
 %choplinmedium{
   font-family: ChoplinMedium;
+}
+%choplinlight{
+  font-family: Choplinlight;
 }
