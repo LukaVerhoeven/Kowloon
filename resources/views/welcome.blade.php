@@ -1,62 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app-layout')
+@section('favicon', '/img/favicon/1-Kowloon---general-icon.png')
+@section('css')
+<link rel="stylesheet" href="/css/slider.css" />
+@endsection
+@section('script')
+<script src="/js/jquery.slides.js"></script>
+@endsection
+@section('content')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="/css/main.css" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-    </head>
-    <body>
-
-      <div class="sidebar">
-        <ul>
-          <li><a href="#" class="menu"></a></li>
-          <li><a href="#" class="search"></a></li>
-          <li><a href="#" class="ask"></a></li>
-          <li class="line"></li>
-        </ul>
-        <ul class="catergory-menu">
-          <li><a href="#" class="dog"></a></li>
-          <li><a href="#" class="cat"></a></li>
-          <li><a href="#" class="fish"></a></li>
-          <li><a href="#" class="bird"></a></li>
-          <li><a href="#" class="rats"></a></li>
-        </ul>
-        <ul>
-          <li class="kowloon-menu"></li>
-        </ul>
-      </div>
-      <div class="full-sidebar hidden">
-        <div class="sidebar">
-          <ul>
-            <li><a href="#" class="menu"></a></li>
-            <li><a href="#" class="search"></a></li>
-            <li><a href="#" class="ask"></a></li>
-            <li class="line"></li>
-          </ul>
-          <ul class="catergory-menu">
-            <li><a href="#" class="dog"></a></li>
-            <li><a href="#" class="cat"></a></li>
-            <li><a href="#" class="fish"></a></li>
-            <li><a href="#" class="bird"></a></li>
-            <li><a href="#" class="rats"></a></li>
-          </ul>
-          <ul>
-            <li class="kowloon-menu full-kowloon"></li>
-          </ul>
+      <img class="imgoverlay" src="/img/kowloonLogo.png" alt="kowloon Logo">
+      <div class="container">
+        <div id="slides">
+          <img src="img/hond.png" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+          <img src="img/hond2.png" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+          <img src="img/hond.png" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+          <img src="img/hond2.png" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
         </div>
       </div>
-      <div class="main">
-      <div class="header">
-        <img src="/img/kowloonLogo.png" alt="kowloon Logo">
 
-      </div>
+
       <div class="content">
         <div class="text">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -76,10 +38,10 @@
         <div class="hot-items">
           <h1>HOT ITEMS.</h1>
           <ul class="hot-item-list">
-            <li><img src="/img/dogmat.jpg" alt=""> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><img src="/img/dogmat.jpg" alt=""> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><img src="/img/dogmat.jpg" alt=""> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><img src="/img/dogmat.jpg" alt=""> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div><p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
           </ul>
           <a href="#" class="visit">Visit the store</a>
         </div>
@@ -97,8 +59,4 @@
 
         </div>
       </div>
-      </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      	<script src="/js/sidebar-menu.js"></script>
-    </body>
-</html>
+@endsection

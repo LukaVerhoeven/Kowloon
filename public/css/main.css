@@ -4,19 +4,19 @@
 @font-face {
   font-family: ChoplinMedium;
   src: url("/fonts/3290DE_0_0.eot") format("eot"), url("/fonts/3290DE_0_0.ttf") format("ttf"), url("/fonts/3290DE_0_0.woff") format("woff"), url("/fonts/3290DE_0_0.woff2") format("woff2"); }
-.header, .content, .sidebar {
+.content, .sidebar {
   position: relative; }
 
 .full-sidebar, .sidebar:last-child, .kowloon-menu, .catergory-content li .cathegory-line {
   position: absolute; }
 
-.menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .header img, .catergory-content li, .catergory-content li a {
+.menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li, .catergory-content li a {
   display: block; }
 
-.content, .catergory-content, .catergory-content li .cathegory-line, .hot-items, .hot-item-list, .hot-item-list li, .newsletter {
+.content, .full-sidebar p, .sidebar a, .catergory-content, .catergory-content li .cathegory-line, .hot-items, .hot-item-list, .hot-item-list li, .newsletter {
   display: inline-block; }
 
-.header, .content, .sidebar, .catergory-content li, .catergory-content li a, .catergory-content li p, .hot-item-list, .hot-item-list li, .hot-item-list li p, .newsletter div, .newsletter div.news-form input {
+.content, .full-sidebar i, .full-sidebar p, .sidebar, .catergory-content li, .catergory-content li a, .catergory-content li p, .hot-item-list, .hot-item-list li, .hot-item-list li p, .newsletter div, .newsletter div.news-form input {
   float: left; }
 
 .hot-items .visit, .hot-item-list li p .prijs {
@@ -25,32 +25,32 @@
 body, .sidebar ul, .catergory-content {
   margin: 0px; }
 
-.header img, .newsletter div.news-img h2 {
+.newsletter div.news-img h2 {
   margin: auto; }
 
 .sidebar ul, .catergory-content, .hot-item-list {
   padding: 0px; }
 
-.sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li, .catergory-content li a, .hot-item-list li, .newsletter div, .newsletter div.news-form {
+.full-sidebar p, .sidebar a, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li, .catergory-content li a, .hot-item-list li, .hot-item-list li .overlay, .newsletter div, .newsletter div.news-form {
   height: 100%; }
 
-body, .header, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content, .catergory-content li a, .catergory-content li p, .hot-items, .hot-item-list, .newsletter {
+body, .sidebar a, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .catergory-content, .catergory-content li a, .catergory-content li p, .hot-items, .hot-item-list, .hot-item-list li .overlay, .newsletter {
   width: 100%; }
 
 .sidebar li {
   width: 100%;
   height: 4vw; }
 
-.content div, .catergory-content li p {
+.content div, .catergory-content li p, .hot-item-list li .overlay p {
   text-align: center; }
 
 .hot-items h1, .hot-item-list li p, .newsletter div.news-form {
   text-align: left; }
 
-.catergory-content li p, .hot-items h1, .hot-items .visit, .newsletter div.news-img h2, .newsletter div.news-img h4, .newsletter div.news-form h3, .newsletter div.news-form input:last-of-type {
+.catergory-content li p, .hot-items h1, .hot-items .visit, .hot-item-list li .overlay p, .newsletter div.news-img h2, .newsletter div.news-img h4, .newsletter div.news-form h3, .newsletter div.news-form input:last-of-type {
   color: white; }
 
-.header, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li a, .hot-item-list li, .newsletter div.news-img {
+.menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li a, .hot-item-list li, .hot-item-list li .img, .newsletter div.news-img {
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -82,10 +82,6 @@ body {
 .main, .sidebar {
   display: table-cell; }
 
-.header {
-  height: 36.6vw;
-  background-image: url("/img/hond.png"); }
-
 .content {
   background-color: #454545;
   padding: 42px 10.5% 7.5% 10.5%; }
@@ -94,13 +90,20 @@ body {
 
 .full-sidebar {
   width: 17.11692%;
-  z-index: 1; }
+  z-index: 20; }
+  .full-sidebar p {
+    line-height: 400%; }
 
 .sidebar {
   width: 4.69442%;
   background-color: #323232; }
-  .sidebar:last-child a {
+  .sidebar:last-child i {
     width: 27%; }
+  .sidebar li.full-kowloon {
+    background-image: url("/img/Kowloon.png");
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+    background-size: 100%; }
   .sidebar .line {
     margin: 1.4vw 0px 1.4vw 7.5%;
     width: 85%;
@@ -143,13 +146,6 @@ body {
 .kowloon-menu {
   background-image: url("/img/K-grey.png");
   bottom: 0px; }
-
-.full-kowloon {
-  background-image: url("/img/Kowloon.png"); }
-
-.header img {
-  margin-top: 3%;
-  width: 22.6%; }
 
 .text {
   margin: 0px 10% 0px 10%;
@@ -206,7 +202,8 @@ body {
     font-weight: lighter;
     margin-bottom: 1%; }
   .hot-items .visit {
-    margin-right: 2%; }
+    margin-right: 1%;
+    font-size: 1.3vw; }
 
 .hot-item-list {
   height: 15vw;
@@ -218,10 +215,23 @@ body {
     margin-right: 0.5%;
     background-color: #565656;
     border: 1px solid #717171; }
-    .hot-item-list li img {
-      margin-top: 2%;
+    .hot-item-list li .img {
+      width: 97%;
       height: 80%;
-      width: 96.6%; }
+      margin-left: 1.5%;
+      margin-top: 2%;
+      background-image: url(/img/dogmat.jpg); }
+    .hot-item-list li .overlay {
+      background-color: #ff6f9e;
+      opacity: 0; }
+      .hot-item-list li .overlay img {
+        margin-top: 20%;
+        width: 33%; }
+      .hot-item-list li .overlay p {
+        font-weight: lighter;
+        font-size: 1.6vw; }
+    .hot-item-list li .overlay:hover {
+      opacity: 0.8; }
     .hot-item-list li p {
       margin-top: 1.5%;
       font-size: 1.2vw;
@@ -264,10 +274,12 @@ body {
     .newsletter div.news-form input {
       font-size: 1.1vw;
       padding: 4%;
-      margin-bottom: 5%; }
+      margin-bottom: 5%;
+      width: 64%; }
       .newsletter div.news-form input:first-of-type {
         border: 2px solid #9a9a9a; }
       .newsletter div.news-form input:last-of-type {
+        width: 15%;
         background-color: #323232;
         padding: 4.7% 4% 4.7% 4%;
         border: 0px; }
