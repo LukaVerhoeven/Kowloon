@@ -41,7 +41,10 @@
             <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
             <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div><p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
             <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"><p>view details</p></div></div><p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <div class="corner"><div class="corner2"></div></div>
+
+
           </ul>
           <a href="#" class="visit">Visit the store</a>
         </div>

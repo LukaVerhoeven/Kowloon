@@ -38,6 +38,7 @@ $main-width: 95.30558015943313%;
 
 //colors
 $sidebar-backgroundcolor: #323232;
+$sidebar-textcolor-grey: #9f9f9f;
 $content-backgroundcolor: #454545;
 $content-textcolor: #cecece;
 $cathegory-border-color: #616161;
@@ -45,6 +46,13 @@ $hot-item-tile-color: #565656;
 $hot-item-tile-border-color: #717171;
 $newsletter-form-color: #5f5f5f;
 $newsletter-input-border-color: #9a9a9a;
+$img-stack1: #818181;
+$img-stack2: #cfcfcf;
+$breadpointers-bg: #323232;
+$breadpointers-text: #cecece;
+
+$dog-color: #ff6f9e;
+
 
 //img
 $header-img: url("/img/hond.png");
@@ -56,7 +64,7 @@ $menu-ask-position: 0%;
 $menu-dog-position: 28.57%;
 $menu-cat-position: 85.72%;
 $menu-fish-position: 57.12%;
-$menu-bird-position: 85.68%;
+$menu-bird-position: 71.68%;
 
 $menu-rat-position: 42.84%;
 $menu-k-grey-img:  url("/img/K-grey.png");
@@ -68,12 +76,26 @@ $type-scale: (
 intro: 1.05vw,               // small text lorem ipsum
 cathegory-small: 1vw,      // small + other animals
 cathegory-big: 1.4vw,      // cathegory text
-title: 2.95vw              // hot-items title
+title: 2.95vw,              // hot-items title
+sidebar-text: 1.8vw,
+store-visit: 1.3vw,
+hot-overlay-text:1.6vw,
+hot-item-text: 1.2vw,
+newsletter-h2: 3.1vw,
+newsletter-h4: 1.5vw,
+newsletter-h3:1.4vw,
+newsletter-p:0.97vw,
+newsletter-input:1.1vw,
 );
 
 $heights: (
 sidebar-line: 0px,
 cathegory-line: 9%,
+cathegory-height:11vw,
+cathegory-link: 62%,
+hot-item:15vw,
+hot-item-img: 80%,
+newsletter:14vw,
 );
 
 $widths: (
@@ -84,6 +106,16 @@ cathegory-a-width: 99%,           // is voor left-border
 cathegory-img-width:80%,
 hot-items-list-width:24.2%,
 hot-item-img-width:96.6%,
+bottom-img:80%,
+hot-item-img: 97%,
+hot-overlay-img: 33%,
+hot-text:90%,
+newsletter-img:63%,
+newsletter-h2: 60%,
+newsletter-form:33%,
+newsletter-input:64%,
+newsletter-button:15%,
+
 );
 ///////////  mixin //////////////
 @mixin margin($margin) { // top right bottom left
@@ -128,6 +160,8 @@ body{
   @extend %inlineblock;
   background-color: $content-backgroundcolor;
   padding:42px 10.5% 7.5% 10.5%;
+  width: 79%;
+  height: 56.6%;
   & div{
     @extend %centertext;
     color: $content-textcolor;
@@ -140,143 +174,8 @@ body{
   @extend %nomargin;
   @extend %nostyle-ul;
 }
-//////////sidebar///////////
-.full-sidebar{
-  @extend %absolute;
-  width: $extra-sidebar-width;
-  z-index: 20;
-  i{
-    // @extend %inlineblock;
-    @extend %floatleft;
-  }
-  p{
-    @extend %inlineblock;
-    @extend %floatleft;
-    @extend %fullheight;
-    line-height: 400%;
-  }
-}
-.sidebar{
-  @extend %relative;
-  @extend %floatleft;
-  width:$sidebar-width;
-  background-color: $sidebar-backgroundcolor;
-  a{
-    @extend %inlineblock;
-    @extend %fullheight;
-    @extend %fullwidth;
-  }
-  &:last-child{
-    @extend %absolute;
-    @extend %fullwidth;
-    @extend %fullheight;
-    & i{
-      width: map-get($widths, sidebar-open-icon-width);
-    }
-  }
 
-  li{
-    @extend %menusize;
-
-    &.full-kowloon{
-      background-image: $menu-kowloon-grey-img;
-      width: 80%;
-      margin: 0% 10% 0% 10%;
-      background-size: 100%;
-    }
-  }
-  .line{
-    @include margin(1.4vw 0px 1.4vw 7.5%);
-    width: map-get($widths, sidebar-open-line-width);
-    height: map-get($heights, sidebar-line);
-    border-bottom: 2px solid $content-backgroundcolor;
-  }
-
-}
-.menu{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-burger-position;
-
-}
-.search{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-search-position;
-  margin-top: 10px;
-}
-.ask{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-ask-position;
-}
-
-.dog{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-dog-position;
-}
-.cat{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-cat-position;
-}
-.fish{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-fish-position;
-}
-.bird{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-bird-position;
-}
-.rats{
-  @extend %fullwidth;
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-rat-position;
-}
-.kowloon-menu{
-  @extend %fullheight;
-  @extend %block;
-  @extend %center-background-image;
-  @extend %fullbackground;
-  @extend %absolute;
-  background-image: $menu-k-grey-img;
-  bottom: 0px;
-}
+@import "sidebar/sidebar.scss";
 
 /////////// Content ///////////
 //////////text /////////
@@ -284,232 +183,11 @@ body{
   @include margin(0px 10% 0px 10%);
   font-size: map-get($type-scale, intro);
 }
-//////// cathegory //////
-.catergory-content{
-  @extend %fullwidth;
-  @extend %inlineblock;
-  height: 11vw;
-  margin-top: 1%;
-  li{
-    @extend %floatleft;
-    @extend %block;
-    @extend %fullheight;
-    width: map-get($widths, cathegory-list-width);
-    a{
-      height: 62%;
-      @extend %fullwidth;
-      @extend %fullheight;
-      @extend %block;
-      @extend %fullbackground;
-      @extend %floatleft;
-      background-image: $homepage-sprite-img;
-    }
-    img{
-      max-width: map-get($widths, cathegory-img-width);
-    }
-    p{
-      @extend %centertext;
-      @extend %colorwhite;
-      @extend %floatleft;
-      @extend %fullwidth;
-      font-size: map-get($type-scale, cathegory-big);
-      font-family: ChoplinLight;
-      text-align: center;
-      padding-top: 50%;
-      .small-text{
-        @include margin(0px 20% 0px 20%);
-      }
-      &.other-text, &.small-p{
-        font-size: map-get($type-scale, cathegory-small);
-      }
-      &.other-text{
-        margin-top: 12%;
-      }
-    }
-    .cathegory-line{
-      @extend %inlineblock;
-      @extend %absolute;
-      border-left: 1px solid $cathegory-border-color;
-      margin-top: 2%;
-      height: map-get($heights, cathegory-line);
-    }
 
-  }
-}
-.dog-content{
-  background-position: 62%;
-}
-.cat-content{
-  background-position: 82%;
-}
-.fish-content{
-  background-position: 39%;
-}
-.bird-content{
-  background-position: 104%;
-}
-.rat-content{
-  background-position: 17%;
-}
-.other-content{
-  background-position: -4%;
-}
-//////// hot-items ///////
-.hot-items{
-  @extend %inlineblock;
-  @extend %fullwidth;
-  margin-bottom: 3.3%;
-  h1{
-    @extend %colorwhite;
-    @extend %alignleft;
-    @extend %choplinmedium;
-    font-size: map-get($type-scale, title);
-    font-weight:lighter;
-    margin-bottom: 1%;
-  }
-  .visit{
-    @extend %colorwhite;
-    @extend %choplinmedium;
-    @extend %floatright;
-    margin-right: 1%;
-    font-size: 1.3vw;
-  }
-}
+@import "Homepage/cathegory.scss";
 
-.hot-item-list{
-  @extend %nostyle-ul;
-  @extend %floatleft;
-  @extend %inlineblock;
-  @extend %fullwidth;
-  @extend %nopadding;
-  height: 15vw;
-  margin-top: 2%;
-  li:last-of-type{
-    margin-right: 0%;
-  }
-  li{
-    @extend %inlineblock;
-    @extend %center-background-image;
-    @extend %fullbackground;
-    @extend %floatleft;
-    @extend %fullheight;
-    width: map-get($widths, hot-items-list-width);
-    margin-right: 0.5%;
-    background-color: $hot-item-tile-color;
-    border: 1px solid $hot-item-tile-border-color;
-    .img{
-      @extend %fullbackground;
-      width: 97%;
-      height: 80%;
-      margin-left: 1.5%;
-      margin-top: 2%;
-      background-image: url(/img/dogmat.jpg);
-    }
-    .overlay{
-      @extend %fullwidth;
-      @extend %fullheight;
-      background-color: #ff6f9e;
-      opacity: 0;
-      img{
-        margin-top: 20%;
-        width: 33%;
-      }
-      p{
-        @extend %centertext;
-        @extend %colorwhite;
-        font-weight: lighter;
-        font-size: 1.6vw
-      }
-    }
-    .overlay:hover{
-      opacity: 0.8;
-    }
+@import "Homepage/hot-items.scss";
 
-    p{
-      @extend %floatleft;
-      @extend %alignleft;
-      margin-top: 1.5%;
-      font-size:1.2vw;
-      margin-left: 5%;
-      margin-right: 5%;
-      width: 90%;
-      font-weight: bold;
-      .prijs{
-        @extend %floatright;
-        font-weight: normal;
-      }
-    }
-  }
-}
-/////////// newsletter ////////
-.newsletter{
-  @extend %inlineblock;
-  @extend %fullwidth;
-  height: 14vw;
-  div{
-    @extend %floatleft;
-    @extend %fullheight;
-    &.news-img{
-      @extend %fullbackground;
-      width: 63%;
-      background-image:$newsletter-image;
-      h2{
-        @extend %colorwhite;
-        @extend %auto-margin;
-        @extend %choplinmedium;
-        font-weight: lighter;
-        line-height: 100%;
-        font-size: 3.1vw;
-        margin-top: 5.8%;
-        width: 60%;
-      }
-      h4{
-        @extend %colorwhite;
-        @extend %choplinlight;
-        font-weight: bolder;
-        font-size: 1.5vw;
-        margin-bottom: 2%;
-        margin-top: 5%;
-      }
-    }
-    &.news-form{
-      @extend %alignleft;
-      @extend %fullheight;
-      background-color:$newsletter-form-color;
-      width: 33%;
-      padding-left: 3%;
+@import "Homepage/newsletter.scss";
 
-      h3{
-        @extend %colorwhite;
-        font-weight: lighter;
-        font-size: 1.4vw;
-        margin-top: 12%;
-        margin-bottom: 1%;
-      }
-      p{
-        font-size: 0.97vw;
-        margin-top: 1%;
-        margin-bottom: 6%;
-      }
-      input{
-        font-size: 1.1vw;
-        padding: 4%;
-        margin-bottom: 5%;
-        width: 64%;
-        @extend %floatleft;
-        &:first-of-type{
-          border: 2px solid $newsletter-input-border-color;
-        }
-        &:last-of-type{
-          @extend %colorwhite;
-          width: 15%;
-          background-color: $sidebar-backgroundcolor;
-          padding: 4.7% 4% 4.7% 4%;
-          border: 0px;
-
-        }
-      }
-
-    }
-  }
-}
+@import "productview/hot-items.scss";

@@ -1,0 +1,70 @@
+//////// cathegory //////
+.catergory-content{
+  @extend %fullwidth;
+  @extend %inlineblock;
+  height:  map-get($heights, cathegory-height);
+  margin-top: 1%;
+  li{
+    @extend %floatleft;
+    @extend %block;
+    @extend %fullheight;
+    width: map-get($widths, cathegory-list-width);
+    a{
+      height: map-get($heights, cathegory-link);
+      @extend %fullwidth;
+      @extend %fullheight;
+      @extend %block;
+      @extend %fullbackground;
+      @extend %floatleft;
+      background-image: $homepage-sprite-img;
+    }
+    img{
+      max-width: map-get($widths, cathegory-img-width);
+    }
+    p{
+      @extend %centertext;
+      @extend %colorwhite;
+      @extend %floatleft;
+      @extend %fullwidth;
+      font-size: map-get($type-scale, cathegory-big);
+      font-family: ChoplinLight;
+      text-align: center;
+      padding-top: 50%;
+      .small-text{
+        @include margin(0px 20% 0px 20%);
+      }
+      &.other-text, &.small-p{
+        font-size: map-get($type-scale, cathegory-small);
+      }
+      &.other-text{
+        margin-top: 12%;
+      }
+    }
+    .cathegory-line{
+      @extend %inlineblock;
+      @extend %absolute;
+      border-left: 1px solid $cathegory-border-color;
+      margin-top: 2%;
+      height: map-get($heights, cathegory-line);
+    }
+
+  }
+}
+.dog-content{
+  background-position: 62%;
+}
+.cat-content{
+  background-position: 82%;
+}
+.fish-content{
+  background-position: 39%;
+}
+.bird-content{
+  background-position: 104%;
+}
+.rat-content{
+  background-position: 17%;
+}
+.other-content{
+  background-position: -4%;
+}

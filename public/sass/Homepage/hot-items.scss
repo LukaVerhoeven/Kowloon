@@ -1,0 +1,137 @@
+//////// hot-items ///////
+.hot-items{
+  @extend %inlineblock;
+  @extend %fullwidth;
+  margin-bottom: 3.3%;
+  h1{
+    @extend %colorwhite;
+    @extend %alignleft;
+    @extend %choplinmedium;
+    font-size: map-get($type-scale, title);
+    font-weight:lighter;
+    margin-bottom: 1%;
+  }
+  .visit{
+    @extend %colorwhite;
+    @extend %choplinmedium;
+    @extend %floatright;
+    margin-right: 1%;
+    font-size: map-get($type-scale, store-visit);
+  }
+}
+
+.hot-item-list{
+  @extend %nostyle-ul;
+  @extend %floatleft;
+  @extend %inlineblock;
+  @extend %fullwidth;
+  @extend %nopadding;
+  height: map-get($heights, hot-item);
+  margin-top: 2%;
+
+  .corner{
+    padding-top: 0.3%;
+    padding-right: 1%;
+    height: 97.9%;
+    width: 20%;
+    margin-left: 77.5%;
+    background-color: $content-backgroundcolor;
+    border-top: 0.4vw solid  $img-stack2;
+    border-right: 0.4vw solid  $img-stack2;
+  }
+  // div.corner3{
+  //   @extend %fullheight;
+  //   width: 97.5%;
+  //   padding-top: 1.2%;
+  //   background-color: $content-backgroundcolor;
+  // }
+  // div.corner4{
+  //   @extend %fullheight;
+  //   width:  97.5%;
+  //   background-color: $content-backgroundcolor;
+  // }
+  div.corner2{
+    @extend %nopadding;
+    // @extend %absolute;
+    margin-left: -8%;
+    width:  107%;
+    background-color:$content-backgroundcolor;
+    height: 96%;
+    right: 3%;
+    top:50%;
+    border-top: 0.4vw solid  $img-stack1;
+    border-right: 0.4vw solid  $img-stack1;
+  }
+  li:last-of-type{
+    margin-right: 0%;
+  }
+  li{
+    @extend %inlineblock;
+    @extend %center-background-image;
+    @extend %fullbackground;
+    @extend %floatleft;
+    @extend %fullheight;
+    width: map-get($widths, hot-items-list-width);
+    margin-right: 0.5%;
+    background-color: $hot-item-tile-color;
+    border: 1px solid $hot-item-tile-border-color;
+    .img{
+      @extend %fullbackground;
+      width: map-get($widths, hot-item-img);
+      height: map-get($heights, hot-item-img);
+      margin-left: 1.5%;
+      margin-top: 2%;
+      background-image: url(/img/dogmat.jpg);
+    }
+    .overlay{
+      @extend %fullwidth;
+      @extend %fullheight;
+      background-color: #ff6f9e;
+      opacity: 0;
+      img{
+        margin-top: 20%;
+        width:  map-get($widths , hot-overlay-img);
+      }
+      p{
+        @extend %centertext;
+        @extend %colorwhite;
+        font-weight: lighter;
+        font-size: map-get($type-scale , hot-overlay-text);
+      }
+    }
+    .overlay:hover{
+      opacity: 0.8;
+    }
+
+    p{
+      @extend %floatleft;
+      @extend %alignleft;
+      margin-top: 1.5%;
+      font-size:  map-get($type-scale , hot-item-text);
+      margin-left: 5%;
+      margin-right: 5%;
+      width:  map-get($widths , hot-text);
+      font-weight: bold;
+      .prijs{
+        @extend %floatright;
+        font-weight: normal;
+      }
+    }
+    &:last-of-type{
+      height: 92%;
+      width: 22.3%;
+      margin-top: 1.6%;
+      .img{
+        @extend %inlineblock;
+        background-image: url(/img/hotdog.jpg);
+        height: 78%;
+        img{
+          margin-top: 11%;
+        }
+      }
+      p{
+        margin-top: 3%;
+      }
+    }
+  }
+}

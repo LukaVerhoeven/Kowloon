@@ -10,13 +10,13 @@
 .full-sidebar, .sidebar:last-child, .kowloon-menu, .catergory-content li .cathegory-line {
   position: absolute; }
 
-.menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li, .catergory-content li a {
+.menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li, .catergory-content li a, .productview .hot-items header .circle {
   display: block; }
 
-.content, .full-sidebar p, .sidebar a, .catergory-content, .catergory-content li .cathegory-line, .hot-items, .hot-item-list, .hot-item-list li, .newsletter {
+.content, .full-sidebar p, .sidebar a, .catergory-content, .catergory-content li .cathegory-line, .hot-items, .hot-item-list, .hot-item-list li, .hot-item-list li:last-of-type .img, .newsletter, .productview .hot-items header {
   display: inline-block; }
 
-.content, .full-sidebar i, .full-sidebar p, .sidebar, .catergory-content li, .catergory-content li a, .catergory-content li p, .hot-item-list, .hot-item-list li, .hot-item-list li p, .newsletter div, .newsletter div.news-form input {
+.content, .full-sidebar i, .full-sidebar p, .sidebar, .catergory-content li, .catergory-content li a, .catergory-content li p, .hot-item-list, .hot-item-list li, .hot-item-list li p, .newsletter div, .newsletter div.news-form input, .productview .hot-items header img, .productview .hot-items header a, .productview .hot-items header .triangle, .productview .hot-items header .circle, .productview .hot-items h1 {
   float: left; }
 
 .hot-items .visit, .hot-item-list li p .prijs {
@@ -28,13 +28,13 @@ body, .sidebar ul, .catergory-content {
 .newsletter div.news-img h2 {
   margin: auto; }
 
-.sidebar ul, .catergory-content, .hot-item-list {
+.sidebar ul, .catergory-content, .hot-item-list, .hot-item-list div.corner2 {
   padding: 0px; }
 
 .full-sidebar p, .sidebar a, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li, .catergory-content li a, .hot-item-list li, .hot-item-list li .overlay, .newsletter div, .newsletter div.news-form {
   height: 100%; }
 
-body, .sidebar a, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .catergory-content, .catergory-content li a, .catergory-content li p, .hot-items, .hot-item-list, .hot-item-list li .overlay, .newsletter {
+body, .sidebar a, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .catergory-content, .catergory-content li a, .catergory-content li p, .hot-items, .hot-item-list, .hot-item-list li .overlay, .newsletter, .productview .hot-items header {
   width: 100%; }
 
 .sidebar li {
@@ -44,10 +44,13 @@ body, .sidebar a, .sidebar:last-child, .menu, .search, .ask, .dog, .cat, .fish, 
 .content div, .catergory-content li p, .hot-item-list li .overlay p {
   text-align: center; }
 
-.hot-items h1, .hot-item-list li p, .newsletter div.news-form {
+.hot-items h1, .hot-item-list li p, .newsletter div.news-form, .productview .hot-items header {
   text-align: left; }
 
-.catergory-content li p, .hot-items h1, .hot-items .visit, .hot-item-list li .overlay p, .newsletter div.news-img h2, .newsletter div.news-img h4, .newsletter div.news-form h3, .newsletter div.news-form input:last-of-type {
+.productview .hot-items header a {
+  text-decoration: none; }
+
+.full-sidebar ul p, .catergory-content li p, .hot-items h1, .hot-items .visit, .hot-item-list li .overlay p, .newsletter div.news-img h2, .newsletter div.news-img h4, .newsletter div.news-form h3, .newsletter div.news-form input:last-of-type {
   color: white; }
 
 .menu, .search, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li a, .hot-item-list li, .hot-item-list li .img, .newsletter div.news-img {
@@ -84,7 +87,9 @@ body {
 
 .content {
   background-color: #454545;
-  padding: 42px 10.5% 7.5% 10.5%; }
+  padding: 42px 10.5% 7.5% 10.5%;
+  width: 79%;
+  height: 56.6%; }
   .content div {
     color: #cecece; }
 
@@ -92,7 +97,11 @@ body {
   width: 17.11692%;
   z-index: 20; }
   .full-sidebar p {
-    line-height: 400%; }
+    margin: 10px 0px 0px 0px;
+    line-height: 190%;
+    font-size: 1.8vw; }
+  .full-sidebar ul:first-child p {
+    color: #9f9f9f; }
 
 .sidebar {
   width: 4.69442%;
@@ -137,7 +146,7 @@ body {
 
 .bird {
   background-image: url("/img/menu-sprite.png");
-  background-position: 85.68%; }
+  background-position: 71.68%; }
 
 .rats {
   background-image: url("/img/menu-sprite.png");
@@ -208,6 +217,24 @@ body {
 .hot-item-list {
   height: 15vw;
   margin-top: 2%; }
+  .hot-item-list .corner {
+    padding-top: 0.3%;
+    padding-right: 1%;
+    height: 97.9%;
+    width: 20%;
+    margin-left: 77.5%;
+    background-color: #454545;
+    border-top: 0.4vw solid #cfcfcf;
+    border-right: 0.4vw solid #cfcfcf; }
+  .hot-item-list div.corner2 {
+    margin-left: -8%;
+    width: 107%;
+    background-color: #454545;
+    height: 96%;
+    right: 3%;
+    top: 50%;
+    border-top: 0.4vw solid #818181;
+    border-right: 0.4vw solid #818181; }
   .hot-item-list li:last-of-type {
     margin-right: 0%; }
   .hot-item-list li {
@@ -241,6 +268,17 @@ body {
       font-weight: bold; }
       .hot-item-list li p .prijs {
         font-weight: normal; }
+    .hot-item-list li:last-of-type {
+      height: 92%;
+      width: 22.3%;
+      margin-top: 1.6%; }
+      .hot-item-list li:last-of-type .img {
+        background-image: url(/img/hotdog.jpg);
+        height: 78%; }
+        .hot-item-list li:last-of-type .img img {
+          margin-top: 11%; }
+      .hot-item-list li:last-of-type p {
+        margin-top: 3%; }
 
 .newsletter {
   height: 14vw; }
@@ -283,5 +321,42 @@ body {
         background-color: #323232;
         padding: 4.7% 4% 4.7% 4%;
         border: 0px; }
+
+.productview {
+  padding-top: 2%; }
+  .productview .hot-items {
+    height: 100%; }
+    .productview .hot-items header img {
+      width: 3%;
+      margin-right: 1%; }
+    .productview .hot-items header a, .productview .hot-items header .triangle {
+      margin-top: 0.1%; }
+    .productview .hot-items header a {
+      color: #cecece;
+      background-color: #323232;
+      font-size: 1.1vw;
+      padding: 0.4% 0.7% 0.4% 1%;
+      border-top-right-radius: 8%;
+      border-bottom-right-radius: 8%;
+      margin-right: 0.5%; }
+      .productview .hot-items header a:first-of-type {
+        padding-left: 0.2%;
+        width: 5.2%; }
+    .productview .hot-items header .circle {
+      margin: 6.8% 8% 3% 2%;
+      width: 0.7vw;
+      height: 0.7vw;
+      background: #ff6f9e;
+      -moz-border-radius: 60%;
+      -webkit-border-radius: 60%;
+      border-radius: 60%; }
+    .productview .hot-items header .triangle {
+      width: 0;
+      height: 0;
+      border-top: 0.94vw solid transparent;
+      border-right: 0.9vw solid #323232;
+      border-bottom: 0.9vw solid transparent; }
+    .productview .hot-items h1 {
+      margin-top: 1.2%; }
 
 /*# sourceMappingURL=main.css.map */

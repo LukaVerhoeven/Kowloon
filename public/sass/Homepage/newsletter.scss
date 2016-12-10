@@ -1,0 +1,72 @@
+/////////// newsletter ////////
+.newsletter{
+  @extend %inlineblock;
+  @extend %fullwidth;
+  height: map-get($heights , newsletter);
+  div{
+    @extend %floatleft;
+    @extend %fullheight;
+    &.news-img{
+      @extend %fullbackground;
+      width: map-get($widths , newsletter-img);
+      background-image:$newsletter-image;
+      h2{
+        @extend %colorwhite;
+        @extend %auto-margin;
+        @extend %choplinmedium;
+        font-weight: lighter;
+        line-height: 100%;
+        font-size:  map-get($type-scale , newsletter-h2);
+        margin-top: 5.8%;
+        width: map-get($widths , newsletter-h2);
+      }
+      h4{
+        @extend %colorwhite;
+        @extend %choplinlight;
+        font-weight: bolder;
+        font-size:map-get($type-scale , newsletter-h4);
+        margin-bottom: 2%;
+        margin-top: 5%;
+      }
+    }
+    &.news-form{
+      @extend %alignleft;
+      @extend %fullheight;
+      background-color:$newsletter-form-color;
+      width: map-get($widths , newsletter-form);
+      padding-left: 3%;
+
+      h3{
+        @extend %colorwhite;
+        font-weight: lighter;
+        font-size:  map-get($type-scale , newsletter-h3);
+        margin-top: 12%;
+        margin-bottom: 1%;
+      }
+      p{
+        font-size: map-get($type-scale , newsletter-p);
+        margin-top: 1%;
+        margin-bottom: 6%;
+      }
+      input{
+        font-size: map-get($type-scale , newsletter-input);
+        padding: 4%;
+        margin-bottom: 5%;
+        width: map-get($widths , newsletter-input);
+        @extend %floatleft;
+        &:first-of-type{
+          border: 2px solid $newsletter-input-border-color;
+        }
+        &:last-of-type{
+          @extend %colorwhite;
+          width: map-get($widths , newsletter-button);
+          background-color: $sidebar-backgroundcolor;
+          padding: 4.7% 4% 4.7% 4%;
+          border: 0px;
+
+        }
+      }
+
+    }
+  }
+}

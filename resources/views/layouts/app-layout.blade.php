@@ -23,7 +23,7 @@
           <li class="line"></li>
         </ul>
         <ul class="catergory-menu">
-          <li><a href="#"><i class="dog"></i></a></li>
+          <li><a href="/dogs"><i class="dog"></i></a></li>
           <li><a href="#"><i class="cat"></i></a></li>
           <li><a href="#"><i class="fish"></i></a></li>
           <li><a href="#"><i class="bird"></i></a></li>
@@ -42,11 +42,11 @@
             <li class="line"></li>
           </ul>
           <ul class="catergory-menu">
-            <li><a href="#"><i class="dog"></i></a></li>
-            <li><a href="#"><i class="cat"></i></a></li>
-            <li><a href="#"><i class="fish"></i></a></li>
-            <li><a href="#"><i class="bird"></i></a></li>
-            <li><a href="#"><i class="rats"></i></a></li>
+            <li><a href="/dogs"><i class="dog"></i><p>Dog</p></a></li>
+            <li><a href="#"><i class="cat"></i><p>Cat</p></a></li>
+            <li><a href="#"><i class="fish"></i><p>Fish</p></a></li>
+            <li><a href="#"><i class="bird"></i><p>Bird</p></a></li>
+            <li><a href="#"><i class="rats"></i><p>Small animals</p></a></li>
           </ul>
           <ul>
             <li class="kowloon-menu full-kowloon"></li>

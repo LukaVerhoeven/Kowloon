@@ -1,0 +1,146 @@
+//////////sidebar///////////
+.full-sidebar{
+  @extend %absolute;
+  width: $extra-sidebar-width;
+  z-index: 20;
+  i{
+    // @extend %inlineblock;
+    @extend %floatleft;
+  }
+  p{
+    @extend %inlineblock;
+    @extend %floatleft;
+    @extend %fullheight;
+    margin: 10px 0px 0px 0px;
+    line-height: 190%;
+    font-size: map-get($type-scale, sidebar-text);
+  }
+  ul p{
+    @extend %colorwhite;
+  }
+  ul:first-child p{
+    color:$sidebar-textcolor-grey;
+  }
+
+}
+.sidebar{
+  @extend %relative;
+  @extend %floatleft;
+  width:$sidebar-width;
+  background-color: $sidebar-backgroundcolor;
+  a{
+    @extend %inlineblock;
+    @extend %fullheight;
+    @extend %fullwidth;
+  }
+  &:last-child{
+    @extend %absolute;
+    @extend %fullwidth;
+    @extend %fullheight;
+    & i{
+      width: map-get($widths, sidebar-open-icon-width);
+    }
+  }
+
+  li{
+    @extend %menusize;
+
+    &.full-kowloon{
+      background-image: $menu-kowloon-grey-img;
+      width:  map-get($widths, bottom-img);
+      margin: 0% 10% 0% 10%;
+      background-size: 100%;
+    }
+  }
+  .line{
+    @include margin(1.4vw 0px 1.4vw 7.5%);
+    width: map-get($widths, sidebar-open-line-width);
+    height: map-get($heights, sidebar-line);
+    border-bottom: 2px solid $content-backgroundcolor;
+  }
+
+}
+.menu{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-burger-position;
+
+}
+.search{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-search-position;
+  margin-top: 10px;
+}
+.ask{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-ask-position;
+}
+
+.dog{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-dog-position;
+}
+.cat{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-cat-position;
+}
+.fish{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-fish-position;
+}
+.bird{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-bird-position;
+}
+.rats{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $menu-sprite-img;
+  background-position: $menu-rat-position;
+}
+.kowloon-menu{
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  @extend %absolute;
+  background-image: $menu-k-grey-img;
+  bottom: 0px;
+}
