@@ -1,0 +1,90 @@
+.productdetail{
+  padding-top: 3.5%;
+  .logo{
+    width: 30%;
+    margin-bottom: 4%;
+  }
+  .product{
+      @extend %inlineblock;
+      @extend %fullwidth;
+      height: 29.2vw;
+    .imgview{
+      @extend %inlineblock;
+      @extend %fullheight;
+      @extend %floatleft;
+      background-color: $hot-item-tile-color;
+      width: 50%;
+      .bigtile{
+        margin-top: 1.5%;
+        width: 97%;
+      }
+      .smalltile{
+        @extend %inlineblock;
+        @extend %floatleft;
+        width: 30%;
+        img{
+          @extend %fullwidth;
+          height: 6vw;
+          margin: 4%;
+        }
+        p{
+          margin-top: 1%;
+          margin-bottom: 1%;
+        }
+      }
+    }
+    .product-info{
+      @extend %inlineblock;
+      @extend %floatleft;
+      width: 50%;
+      nav{
+        height: 2vw;
+        img{
+          width: 5.7%;
+        }
+        a:first-of-type{
+          width: 11.2%;
+        }
+        a{
+          padding-top: 0.8%;
+          height: 1.4vw;
+        }
+      }
+      h1,h2,h3{
+        @extend %nomargin;
+      }
+      h2{
+        font-size:2vw;
+        margin-bottom: 2%;
+      }
+      h3{
+        font-weight: 100;
+        font-size: 1.5vw;
+
+      }
+      .item-colors{
+          @extend %inlineblock;
+          @extend %fullwidth;
+        a{
+          @extend %inlineblock;
+          @extend %floatleft;
+          height: 1vw;
+          width: 1vw;
+          border-radius: 50%;
+          border: 1px solid white;
+        }
+        .color-grey{
+          background-color: $item-color-2
+        }
+        .color-blue{
+          background-color: $item-color-1;
+        }
+        .color-white{
+          background-color: white;
+        }
+      }
+    }
+  }
+
+
+}

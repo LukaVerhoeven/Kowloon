@@ -1,0 +1,123 @@
+.items {
+  .select{
+    @extend %inlineblock;
+    @extend %floatleft;
+    width: 50%;
+    margin-top: 1%;
+    ul{
+      @extend %nomargin;
+      position: absolute;
+      background-color: white;
+      color: $content-backgroundcolor;
+      padding: 0%;
+      z-index: 5;
+      width: 11.95vw;
+      li{
+        @extend %fullwidth;
+        @extend %inlineblock;
+        height: 2.5vw;
+        list-style: none;
+
+
+        a{
+          @extend %inlineblock;
+          height: 40%;
+          width: 74%;
+          padding: 6% 13%;
+          text-decoration: none;
+          color: black;
+          font-size: 0.8vw
+        }
+      }:hover{
+        background-color: $ddl-hover-color;
+      }
+    }
+    select{
+      -webkit-appearance: none;  /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+      -moz-appearance: none;  /*REMOVES DEFAULT FIREFOX STYLE*/
+      border: none;  /*REMOVES BORDER*/
+
+      color: $breadpointers-text;
+      font-size: 1vw;
+      padding: 0% 2%;
+      width: 32%;
+      height: 2.3vw;
+      cursor: pointer;
+
+      background: $cathegory-border-color url(http://i.imgur.com/FYZaMwe.png) no-repeat;
+      background-size: 4% 55%;
+
+      background-position: 90% 37%;
+    }
+  }
+  .amountitems{
+    @extend %inlineblock;
+    width: 49%;
+    margin-bottom: 0.8%;
+    p{
+      @extend %floatright;
+      &:first-child{
+        font-weight: bolder;
+      }
+      &:last-child{
+        margin-right: 1%;
+        color: $content-textcolor;
+      }
+    }
+  }
+  ul.hot-item-list{
+    @extend %fullheight;
+      &:first-of-type{
+        width: 50%;
+    }
+    li{
+      margin-bottom: 5%;
+      .img{
+        height: 12vw;
+      }
+    }
+
+
+  }
+  .bigitem{
+    @extend %inlineblock;
+    width: 49.7%;
+    margin-top: 2%;
+    background-color: $hot-item-tile-color;
+    border: 1px solid $hot-item-tile-border-color;
+    img{
+      width: 98%;
+      margin: 1%;
+    }
+    .bigtext{
+      margin-left: 5%;
+      h2{
+        font-weight: bolder;
+        margin-bottom: 1%;
+        font-size: 2.3vw;
+      }
+      p{
+        margin-top: 0%;
+        font-size: 1.1vw;
+      }
+      .prijs{
+        @extend %inlineblock;
+        font-size: 1.2vw;
+        margin-top: 2%;
+      }
+      input{
+        @extend %floatright;
+        @extend %colorwhite;
+        background-color: $dog-color;
+        font-weight: bolder;
+        font-size: 1vw;
+        border: none;
+        margin: 1%;
+        padding: 2% 4%;
+      }
+    }
+
+  }
+
+
+}

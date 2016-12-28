@@ -50,6 +50,11 @@ $img-stack1: #818181;
 $img-stack2: #cfcfcf;
 $breadpointers-bg: #323232;
 $breadpointers-text: #cecece;
+$ddl-hover-color: #e9e9e9;
+
+//item-colors
+$item-color-1: #2d4aac;
+$item-color-2: #282828;
 
 $dog-color: #ff6f9e;
 
@@ -104,7 +109,7 @@ sidebar-open-line-width:85%,
 cathegory-list-width:16.5%,
 cathegory-a-width: 99%,           // is voor left-border
 cathegory-img-width:80%,
-hot-items-list-width:24.2%,
+hot-items-list-width:18vw,
 hot-item-img-width:96.6%,
 bottom-img:80%,
 hot-item-img: 97%,
@@ -126,7 +131,10 @@ newsletter-button:15%,
 @import "parameters/parameters.scss";
 /////////// features ///////////
 .hidden{
-  display: none;
+  display: none !important;
+}
+.closed{
+  max-height: 0px !important;
 }
 //////////// Divs layout ////////////////
 
@@ -140,11 +148,23 @@ body{
   table-layout: fixed;
 }
 .main{
+  @extend %fullheight;
   width: $main-width;
+
 }
 .main, .sidebar{
   display: table-cell;
 
+}
+h1,h2,h3,h4,p{
+    @extend %alignleft;
+}
+h1{
+  @extend %colorwhite;
+  @extend %choplinmedium;
+  font-size: map-get($type-scale, title);
+  font-weight:lighter;
+  margin-bottom: 1%;
 }
 // .header{
 //   @extend %relative;
@@ -164,8 +184,10 @@ body{
   height: 56.6%;
   & div{
     @extend %centertext;
+    @extend %colorwhite;
+  }
+  .text p , .icons p{
     color: $content-textcolor;
-
   }
 }
 /////////// ul /////////////////
@@ -190,4 +212,6 @@ body{
 
 @import "Homepage/newsletter.scss";
 
-@import "productview/hot-items.scss";
+@import "productview/header.scss";
+@import "productview/items.scss";
+@import "productdetail/product.scss";

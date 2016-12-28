@@ -106,6 +106,7 @@
     p{
       @extend %floatleft;
       @extend %alignleft;
+      @extend %colorwhite;
       margin-top: 1.5%;
       font-size:  map-get($type-scale , hot-item-text);
       margin-left: 5%;

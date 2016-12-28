@@ -14,6 +14,5 @@ require('laravel-elixir-vue-2');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    mix.scripts(['jquery.slides.js', 'priceslider.js', 'slider-menu.js', 'slider.js'], 'public/js/main.js');
 });
