@@ -19,6 +19,11 @@ Route::get('/dogs', function () {
     return view('dogs');
 });
 
+
 Route::get('/productview', function () {
     return view('productdetail');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });

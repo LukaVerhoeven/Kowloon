@@ -1,0 +1,29 @@
+.other-products{
+  .item-slider{
+    @extend %inlineblock;
+    overflow: hidden;
+  .hot-item-list {
+    width: 3000%;
+    height: 11vw;
+    li{
+      width: 14vw;
+      margin-right: 0.5vw;
+    }
+
+  }
+  .prev, .next{
+    @extend %absolute;
+    @extend %fullbackground;
+    background-image: $icons;
+    cursor: pointer;
+    width: 4vw;
+    height: 4vw;
+    margin-top:5%;
+  }
+  .next{
+    margin-left: 72%;
+    background-position: 11%;
+
+  }
+}
+}

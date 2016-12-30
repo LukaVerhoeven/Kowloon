@@ -8,7 +8,7 @@
         <title>Kowloon</title>
         <link rel="shortcut icon" type="image/png" href="@yield('favicon')"/>
         <!-- Fonts -->
-        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/all.css" />
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         @yield('css')
 
@@ -56,8 +56,10 @@
       <div class="main">
         @yield('content')
       </div>
+      @include('search')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      	<script src="/js/sidebar-menu.js"></script>
+      	<script src="/js/all.js"></script>
+        <script src="/js/priceslider.js"></script>
           @yield('script')
 
     </body>

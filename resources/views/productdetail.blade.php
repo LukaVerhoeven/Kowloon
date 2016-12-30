@@ -1,15 +1,12 @@
 @extends('layouts.app-layout')
-@section('favicon', '/img/favicon/1-Kowloon---general-icon.png')
+@section('favicon', '/img/favicon/2-Kowloon---dogs-icon.png')
   @section('css')
-    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-    <link rel="stylesheet" href="/css/slider.css" />
-    <link rel="stylesheet" href="/css/priceslider.css" />
+
   @endsection
   @section('script')
-    <script src="/js/jquery.slides.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="/js/priceslider.js"></script>
-    <script src="/js/foldout-filter.js"></script>
+    {{-- <script src="/js/foldout-filter.js"></script>
+    <script src="/js/slider-detail.js"></script> --}}
+
   @endsection
   @section('content')
 
@@ -54,16 +51,66 @@
         </div>
 
       </div>
-      
+
       <div class="spec">
+        <h2>Specifications</h2>
+        <h3>DIMENSIONS</h3>
+          <ul>
+            <li><span class="bold">S</span> - Ø 53x18cm </li>
+            <li><span class="bold">M</span> - Ø 53x18cm </li>
+            <li><span class="bold">L</span> - Ø 53x18cm </li>
+          </ul>
+        <h3>TITEL</h3>
+        <p><span class="bold">S</span> - hier komt technische tekst</p>
 
       </div>
+
       <div class="other-products">
+        <h1>GERELATEERDE PRODUCTEN</h1>
+        <div class="item-slider">
 
+          <ul class="hot-item-list">
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></li>
+          </ul>
+          <div class="prev"></div>
+          <div class="next"></div>
+
+        </div>
       </div>
+
+      <a href="#" class="link">view more</a>
+
       <div class="FAQ">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <div class="question">
+          <button class="filter">Dit is een vraag</button>
+          <div class="filterdiv closed">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+          </div>
+        </div>
+        <div class="question">
+          <button class="filter">Dit is een opengeklapte vraag</button>
+          <div class="filterdiv">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+          </div>
+        </div>
+        <div class="question">
+          <button class="filter">Dit is een vraag</button>
+          <div class="filterdiv closed">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+          </div>
+        </div>
 
       </div>
+
+      <a href="#" class="link">More questions?</a>
+
       <div class="newsletter">
         <div class="news-img">
           <h2>discover amazing Knowloon deals!</h2>

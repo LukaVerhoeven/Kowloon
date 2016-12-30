@@ -1,7 +1,8 @@
 const elixir = require('laravel-elixir');
 
-require('laravel-elixir-vue-2');
 
+var base_src  = 'resources/assets';
+var base_dest = 'public/assets';
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -14,5 +15,24 @@ require('laravel-elixir-vue-2');
  */
 
 elixir(mix => {
-    mix.scripts(['jquery.slides.js', 'priceslider.js', 'slider-menu.js', 'slider.js'], 'public/js/main.js');
+    mix.sass('/main.scss', 'resources/assets/css/main.css');
+
+    mix.styles([
+    '/main.css',
+    '/priceslider.css',
+    '/slider.css'
+    ]);
+
+    mix.scripts([
+    '/jquery.slides.js',
+    // '/priceslider.js',
+    '/sidebar-menu.js',
+    '/slider-detail.js',
+    '/foldout-filter.js',
+    '/slider.js',
+    ]);
+
+    //mix.scripts(['jquery.slides.js', 'priceslider.js', 'slider-menu.js', 'slider.js'], 'public/js/main.js');
+
 });
+  console.log(elixir);

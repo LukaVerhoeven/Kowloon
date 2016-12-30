@@ -1,15 +1,15 @@
 @extends('layouts.app-layout')
-@section('favicon', '/img/favicon/1-Kowloon---general-icon.png')
+@section('favicon', '/img/favicon/2-Kowloon---dogs-icon.png')
   @section('css')
     <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-    <link rel="stylesheet" href="/css/slider.css" />
-    <link rel="stylesheet" href="/css/priceslider.css" />
+    {{-- <link rel="stylesheet" href="/css/slider.css" />
+    <link rel="stylesheet" href="/css/priceslider.css" /> --}}
   @endsection
   @section('script')
-    <script src="/js/jquery.slides.js"></script>
+    {{-- <script src="/js/jquery.slides.js"></script> --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="/js/priceslider.js"></script>
-    <script src="/js/foldout-filter.js"></script>
+    {{-- <script src="/js/priceslider.js"></script> --}}
+    {{-- <script src="/js/foldout-filter.js"></script> --}}
   @endsection
   @section('content')
 

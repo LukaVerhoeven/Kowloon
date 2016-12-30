@@ -1,0 +1,67 @@
+.bannerimg{
+  @extend %fullwidth;
+  @extend %block;
+  height: 36.6vw;
+}
+
+.about{
+  h2{
+    @extend %choplinlight;
+  }
+  nav{
+    a{
+      width: 6%;
+    }
+  }
+  .kowloon{
+    @extend %floatleft;
+    width: 60%;
+    margin-right: 10%;
+    p{
+      font-size: 0.9vw;
+    }
+  }
+  .contact{
+    @extend %floatleft;
+    @extend %alignleft;
+    padding-left: 2%;
+    margin-top: 3%;
+    width: 26%;
+    border-left: 1px solid $cathegory-border-color;
+    border-bottom: 1px solid $cathegory-border-color;
+    h2{
+      margin: 0px 0px 1% 0px;
+    }
+    ul{
+      margin-top: 3%;
+      padding-left: 5%;
+      li{
+        font-size: 0.9vw;
+      }
+    }
+  }
+  .message{
+    @extend %fullwidth;
+    @extend %inlineblock;
+      @extend %alignleft;
+    label,input{
+      @extend %block;
+    }
+    input,textarea{
+      padding: 10px;
+      border: 1px solid $newsletter-input-border-color;
+      margin-bottom: 25px;
+    }
+    textarea{
+      font-family: arial;
+    }
+    .formsubmit{
+      @extend %colorwhite;
+      border: 0px;
+      padding: 10px 7% 10px 7%;
+      font-weight: bold;
+      background-color:  $dog-color;
+    }
+
+  }
+}
