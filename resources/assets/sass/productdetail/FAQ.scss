@@ -1,20 +1,41 @@
 
 .FAQ{
+  h1{
+    font-size: 1.6vw;
+    margin-top: 2.5%;
+    margin-bottom: 2%;
+  }
+  button{
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: arial;
+    margin-top: 0.6%;
+    margin-bottom: 1.2%;
+  }
   @extend %alignleft;
   .question{
     @extend %inlineblock;
-    width: 97%;
+    @extend %floatleft;
+    width: 98%;
     background-color: $hot-item-tile-border-color;
     padding: 1%;
     padding-bottom: 0px;
     margin-bottom: 1%;
+    button{
+      @extend %fullwidth;
+      @extend %alignleft;
+    }
     .filter{
       @extend %floatleft;
     }
     .filterdiv{
+      @extend %floatleft;
       @extend %inlineblock;
-
       margin: 0px 0px 0px 49px;
+      p{
+        font-size: map-get($type-scale, p);
+        margin-top: 0px;
+      }
     }
   }
 }

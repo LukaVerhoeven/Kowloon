@@ -55,34 +55,72 @@
 
         <div class="items">
           <div class="select">
-            <select>
-              <option value="lowhigh">Price: low to high</option>
-              <option value="highlow">Price: high to low</option>
+            <select class="price-filter-select">
+              <option value="lowhigh" class="hidden">Price: low to high</option>
+              {{-- <option value="highlow">Price: high to low</option>
               <option value="latest">Latest</option>
-              <option value="oldest">Oldest</option>
+              <option value="oldest">Oldest</option> --}}
             </select>
-            <ul>
-              <li><a href="#">Price: low to high</a></li>
-              <li><a href="#">Price: high to low</a></li>
-              <li><a href="#">Latest</a></li>
-              <li><a href="#">Oldest</a></li>
+            <ul class="price-filter hidden">
+              <li><a>Price: low to high</a></li>
+              <li><a>Price: high to low</a></li>
+              <li><a>Latest</a></li>
+              <li><a>Oldest</a></li>
             </ul>
           </div>
 
-          <div class="amountitems">
+          <div class="amountitems no-mobile">
             <p class="itemcount"><span class="loadamount">5</span> of <span class="allamount">56</span></p>
             <p>Dog items:</p>
 
           </div >
 
-          <ul class="hot-item-list">
-            <li><a href="/productview"><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div><p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"> <p>view details</p></div></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><div class="img"><div class="overlay"><img src="/img/info-hot.png" alt="info kader"><p>view details</p></div></div><p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+          <ul class="hot-item-list ">
+
+            <div class="scroll">
+
+            <li><div class="img-overflow">
+              <div class="item-colors">
+                <a href="#" class="color-white"></a>
+                <a href="#" class="color-black"></a>
+                <a href="#" class="color-blue"></a>
+              </div>
+              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li><div class="img-overflow">
+              <div class="item-colors">
+                <a href="#" class="color-white"></a>
+                <a href="#" class="color-black"></a>
+                <a href="#" class="color-blue"></a>
+              </div>
+              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+            <li class="no-tablet"><div class="img-overflow">
+              <div class="item-colors">
+                <a href="#" class="color-white"></a>
+                <a href="#" class="color-black"></a>
+                <a href="#" class="color-blue"></a>
+              </div>
+              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
+              <li class="stack-list">
+                <div class="corner"><div class="corner2"></div></div>
+                <div class="stack"><i class="stack-icon"></i><div class="img-overflow"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay">
+                <i class="product-icon"></i><p>view details</p></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></div>
+              </li>
+              
+              </div>
+              <div id="result_wrapper">
+
+              </div>
           </ul>
-          <div class="bigitem">
-            <img src="/img/bigitem.jpg" alt="">
+
+          <div class="bigitem no-tablet no-mobile">
+            <div class="img-overflow">
+              <div class="item-colors">
+                <a href="#" class="color-white"></a>
+                <a href="#" class="color-black"></a>
+                <a href="#" class="color-blue"></a>
+              </div>
+              <img src="/img/products/product1.jpg" alt="">
+            </div>
             <div class="bigtext">
               <h2>Cooling mat</h2>
               <p>Hier komt een deel van de beschrijvende tekst die bij elk product hoort. Ook terug te vinden in het product detail.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius....</p>

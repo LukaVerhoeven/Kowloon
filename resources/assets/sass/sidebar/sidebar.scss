@@ -13,7 +13,7 @@
     @extend %fullheight;
     margin: 10px 0px 0px 0px;
     line-height: 190%;
-    font-size: map-get($type-scale, sidebar-text);
+    font-size: map-get($type-scale, scale8);
   }
   ul p{
     @extend %colorwhite;
@@ -78,7 +78,16 @@
   @extend %fullbackground;
   background-image: $menu-sprite-img;
   background-position: $menu-search-position;
-  margin-top: 10px;
+}
+.about-icon{
+  @extend %fullwidth;
+  @extend %fullheight;
+  @extend %block;
+  @extend %center-background-image;
+  @extend %fullbackground;
+  background-image: $icons;
+  background-position: 56.28% 20%;
+  background-size: 667%;
 }
 .ask{
   @extend %fullwidth;
@@ -143,4 +152,28 @@
   @extend %absolute;
   background-image: $menu-k-grey-img;
   bottom: 0px;
+}
+
+.searchactive{
+    background-image: $icons;
+    background-size: 1177% 861%;
+    background-position: 34% 1%;
+    margin-top: 2px;
+}
+
+.askactive{
+  background-image: $icons;
+  background-size: 1287% 891%;
+  background-position: 45.5% 1%;
+}
+.hamburger{
+  @extend %absolute;
+  background-image: $icons;
+  background-size: 1287% 891%;
+  background-position: 97.5% 21%;
+  width: 8.2vw;
+  height: 8vw;
+  z-index: 11;
+  margin-left: 4%;
+  margin-top: 3.1%;
 }

@@ -1,0 +1,33 @@
+@media (min-width: $phone-width) and (max-width: $tablet-width ){
+  #body{
+
+  }
+//searchbar
+  #body .FAQ-page{
+    h1{
+      font-size: 5vw;
+      margin-top: 8%;
+    }
+    .icon-enter{
+      margin-left: 42%;
+    }
+    #itemsearch{
+      padding: 0 0% 5% 8vw;
+      width: 94%;
+    }
+    //result-item
+      .result-item{
+        height: inherit;
+        display: inline-block;
+        h2{
+          font-size: 3vw;
+          margin: 0% 3% 0% 3%;;
+        }
+        p{
+          margin-top: 1%;
+        }
+
+      }
+  }
+
+}

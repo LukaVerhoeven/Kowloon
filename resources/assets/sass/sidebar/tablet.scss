@@ -1,0 +1,53 @@
+@media (min-width: $phone-width) and (max-width: $tablet-width ){
+
+  .main{
+    width: 93%;
+
+
+  }
+
+  .sidebar{
+    width: 7%;
+    li{
+      height: 6vw;
+    }
+
+  }
+  .full-sidebar{
+    width: 32%;
+
+    .sidebar:last-child i {
+      width: 22%;
+    }
+
+  }
+  .tablet-only{
+    display: block;
+  }
+  .no-tablet{
+    display: none !important;
+  }
+  .no-desktop{
+    display: block;
+  }
+  html #body{
+  p,input,li{
+    font-size: 1.9vw ;
+  }
+  h1{
+    font-size: 4vw;
+  }
+  h2{
+    font-size: 3.7vw ;
+  }
+  h4,button{
+    font-size: 2.2vw;
+  }
+  label,a{
+    font-size: 2.3vw;
+  }
+  h3{
+    font-size: 2.7vw;
+  }
+}
+}

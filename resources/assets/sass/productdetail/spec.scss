@@ -1,3 +1,36 @@
 .spec{
   border: 1px solid $hot-item-tile-border-color;
+  padding-left: 3%;
+
+  h2{
+    margin: 2% 0% 1% 0%;;
+    font-size: 1.6vw;
+    font-weight: normal;
+  }
+  h3{
+    font-size: 1.3vw;
+    font-weight: lighter;
+    margin: 1% 0%;
+  }
+  li,p{
+    font-size: map-get($type-scale, p);
+  }
+  ul{
+    @extend %inlineblock;
+    @extend %fullwidth;
+    @extend %floatleft;
+    padding-left: 3%;
+    margin: 0% 0% 2% 0%;
+  }
+  li{
+    @extend %floatleft;
+    @extend %inlineblock;
+    text-align: left;
+    list-style: none;
+    margin-right: 5%;
+  }
+  p{
+    margin-left: 3%;
+  }
+
 }

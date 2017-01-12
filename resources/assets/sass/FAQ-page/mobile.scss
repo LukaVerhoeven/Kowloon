@@ -1,0 +1,17 @@
+@media (max-width:  $phone-width){
+  #body{
+    h1{
+      margin-bottom: 5%;
+    }
+    .FAQ-page {
+      .results{
+        margin-top: 10%;
+        .result-item{
+          display: inline-block;
+          height: 100%;
+        }
+      }
+    }
+
+  }
+}

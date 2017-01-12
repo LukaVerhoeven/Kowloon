@@ -1,0 +1,59 @@
+.cookie{
+  background-color: $cookie-overlay-color;
+  margin-left: -100%;
+  width: 100%;
+  z-index: 50;
+
+  .dogbone{
+    @extend %block;
+    @extend %floatleft;
+    @extend %absolute;
+    background-image: $icons;
+    background-position: -1% 100%;
+    background-size: 467% 471%;
+    height: 9vw;
+    width: 14vw;
+    margin-left: 28%;
+    margin-top: 13%;
+  }
+  .popup-cookie{
+    background-color: $cookie-bg-color;
+    width: 20%;
+    margin: auto;
+    padding: 6% 6% 3% 6%;
+    margin-top: 15%;
+
+      .escbut{
+        @extend %block;
+        @extend %floatright;
+        width: 2vw;
+        height: 2vw;
+        background-image: $icons;
+        background-position: 0% 19%;
+        background-size: 927% 611%;
+        margin-top: -24%;
+        margin-right: -25%;
+        cursor: pointer;
+      }
+      h1{
+        color: $searchbarcolor;
+        margin-top: 3%;
+      }
+      p{
+        margin-top: 3%;
+        font-size: map-get($type-scale, p);
+        line-height: 140%;
+      }
+      button{
+        @extend %colorwhite;
+        background-color: $searchbarcolor;
+        border: 0px;
+        width: 100%;
+        padding: 6%;
+        font-size: 1.5vw;
+        font-weight: bold;
+        margin-top: 8%;
+        cursor: pointer;
+      }
+  }
+}

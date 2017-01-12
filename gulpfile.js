@@ -26,10 +26,12 @@ elixir(mix => {
     mix.scripts([
     '/jquery.slides.js',
     // '/priceslider.js',
+    'infinitescroll.js',
     '/sidebar-menu.js',
     '/slider-detail.js',
     '/foldout-filter.js',
     '/slider.js',
+    '/cookie.js',
     ]);
 
     //mix.scripts(['jquery.slides.js', 'priceslider.js', 'slider-menu.js', 'slider.js'], 'public/js/main.js');

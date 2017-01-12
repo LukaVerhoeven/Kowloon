@@ -1,0 +1,50 @@
+.FAQ-page{
+  .escbar{
+    @extend %floatright;
+  }
+  h1{
+    color:$searchbarcolor;
+    margin-left: 10%;
+    margin-top: 17%;
+  }
+  .searchdiv{
+    margin-top: 3%;
+
+    input::-webkit-input-placeholder {
+    color: $FAQ-searchbarcolor ;
+    }
+
+    input:-moz-placeholder { /* Firefox 18- */
+    color: $FAQ-searchbarcolor ;
+    }
+
+    input::-moz-placeholder {  /* Firefox 19+ */
+    color: $FAQ-searchbarcolor ;
+    }
+
+    input:-ms-input-placeholder {
+    color: $FAQ-searchbarcolor ;
+    }
+    .icon-enter{
+      margin-left: 33%;
+    }
+
+
+  }
+  .CS-page{
+    text-decoration: underline;
+  }
+  .results{
+    .result-item{
+      h2{
+        margin-left: 2%;
+        padding-top: 2%;
+      }
+      p{
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+
+    }
+  }
+}

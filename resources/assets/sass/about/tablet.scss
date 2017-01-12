@@ -1,0 +1,27 @@
+@media (min-width: $phone-width) and (max-width: $tablet-width ){
+  #body .about{
+    h2{
+      font-size: 3vw;
+    }
+    nav a{
+      width: 11.2%;
+    }
+    .message{
+      textarea{
+          width: 95%;
+      }
+      label{
+        margin-bottom: 1%;
+      }
+      .formsubmit{
+        padding: 10px 12% 10px 12%;
+      }
+    }
+    .contact{
+      li{
+        font-size: 2vw;
+      }
+    }
+
+  }
+}

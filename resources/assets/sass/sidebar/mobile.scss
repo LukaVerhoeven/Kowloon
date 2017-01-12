@@ -1,0 +1,41 @@
+@media (max-width:  $phone-width){
+  #body{
+  .no-mobile{
+    display: none;
+  }
+  .no-desktop{
+    display: block;
+  }
+  .mobile-only{
+    display: block;
+  }
+  p,li{
+    font-size: 3vw;
+  }
+  a,h4,input,label{
+    font-size: 4vw;
+  }
+  h3,button,select{
+    font-size: 5vw;
+  }
+  h1,h2{
+    font-size: 6vw;
+  }
+  .full-sidebar{
+    width: 60%;
+
+  }
+  .sidebar{
+    li{
+      height: 14vw;
+      p{
+        font-size: 5vw;
+      }
+      &.line{
+        height: 2%;
+      }
+    }
+  }
+}
+
+}

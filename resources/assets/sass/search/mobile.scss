@@ -1,0 +1,56 @@
+@media (max-width:  $phone-width){
+  #body{
+    .searchpage, .FAQ-page {
+      width: 100%;
+      margin-left: -100%;
+    }
+    .searchpage{
+
+      .advancedFilter{
+        width: 75%;
+        .filterdiv{
+          .checkboxlist, .pricefilter{
+            width: 100%;
+          }
+          .slider{
+            width: 86%;
+          }
+          .price-input input{
+            width: 13vw;
+            margin-bottom: 20%;
+          }
+        }
+      }
+      }
+      .escbar{
+        width: 15%;
+        height: 5%;
+        a{
+          background-position: 91% 2%;
+        background-size: 1307% 1041%;
+        }
+      }
+      .searchdiv{
+        margin-top: -1%;
+        label{
+          width: 4vw;
+          height: 4vw;
+        }
+        #itemsearch{
+          font-size: 4vw;
+        }
+        .icon-enter{
+          margin-top: -6.5%;
+          margin-left: 52%;
+          background-position: 69% -1.2%;
+          background-size: 837% 491%;
+        }
+      }
+      .resultword{
+        .cross{
+          width: 7vw;
+          height: 7vw;
+        }
+      }
+  }
+}

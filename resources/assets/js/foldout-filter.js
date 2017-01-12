@@ -8,16 +8,20 @@
 
   var target = event.target;
   var slider = $(target).parent().find('.filterdiv');
+  var p = $(slider).find('p');
+  classToggle(slider, p);
 
-  classToggle(slider);
 
+  function classToggle(sliderElement, textElement){
+    // if ( sliderElement.hasClass('closed') ) {
 
-  function classToggle(sliderElement){
-    if ( sliderElement.hasClass('closed') ) {
+      if (p.length > 0) {
+        textElement.toggleClass('hidden');
+      }
       sliderElement.toggleClass('closed');
-    } else {
-      sliderElement.toggleClass('closed');
-    }
+    // } else {
+    //   sliderElement.toggleClass('closed');
+    // }
   }
 
   });

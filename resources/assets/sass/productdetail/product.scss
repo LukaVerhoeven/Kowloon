@@ -2,33 +2,86 @@
   padding-top: 3.5%;
   .logo{
     width: 30%;
+    margin-left: 32%;
     margin-bottom: 4%;
   }
   .product{
       @extend %inlineblock;
       @extend %fullwidth;
-      height: 29.2vw;
+      height: 30vw;
+      margin-bottom: 1.5%;
+
     .imgview{
       @extend %inlineblock;
       @extend %fullheight;
       @extend %floatleft;
       background-color: $hot-item-tile-color;
-      width: 50%;
-      .bigtile{
-        margin-top: 1.5%;
-        width: 97%;
+      border: 1px solid $hot-item-tile-border-color;
+      width: 49%;
+      margin-right: 3%;
+      .bigtile{ //img-overflow
+        @extend %floatleft;
+        margin: 1%;
+        height: 20.5vw;
+        width: 98%;
+        img{
+          margin-top: -15%;
+          width: 100%;
+        }
+        .plus-icon{
+          @extend %block;
+          @extend %absolute;
+          background-image: $icons;
+          margin-left: 34.9%;
+          background-position: 99% 2%;
+          background-size: 1110% 690%;
+          width: 3vw;
+          cursor: pointer;
+          height: 3vw;
+        }
       }
+
       .smalltile{
         @extend %inlineblock;
         @extend %floatleft;
-        width: 30%;
-        img{
+        width: 31%;
+        margin-right: 2%;
+        .img-overflow{
           @extend %fullwidth;
-          height: 6vw;
+          @extend %floatleft;
+          height: 6.7vw;
           margin: 4%;
+          margin-bottom: 0px;
+          img{
+            margin-top: -20%;
+            height: 12vw;
+            width: 100%;
+          }
+          &.active{
+            border: 2px solid white;
+            height: 6.3vw;
+            width: 98%;
+          }
+        }
+
+        .tile-overlay{
+          @extend %absolute;
+          @extend %block;
+          width: 12%;
+          margin: 0.5%;
+          background-color: white;
+          opacity: 0.38;
+          height: 6.6vw;
+          z-index: 10;
+          &.active-tile{
+            opacity: 0;
+          }
         }
         p{
-          margin-top: 1%;
+          @extend %floatleft;
+          margin-left: 5%;
+          font-size: map-get($type-scale, p);
+          margin-top: 2%;
           margin-bottom: 1%;
         }
       }
@@ -36,7 +89,7 @@
     .product-info{
       @extend %inlineblock;
       @extend %floatleft;
-      width: 50%;
+      width: 47%;
       nav{
         height: 2vw;
         img{
@@ -60,31 +113,91 @@
       h3{
         font-weight: 100;
         font-size: 1.5vw;
+        &:first-of-type{
+          margin-bottom: 2%;
+        }
 
       }
+      p{
+        font-size: 1.1vw;
+        margin-top: 1%;
+        margin-bottom: 9%;
+      }
       .item-colors{
-          @extend %inlineblock;
-          @extend %fullwidth;
-        a{
-          @extend %inlineblock;
+        position: relative;
+        float: left;
+        width: 100%;
+      }
+      .obligatory-icon{
+        .square,.circle,.triangle{
+          @extend %block;
           @extend %floatleft;
-          height: 1vw;
-          width: 1vw;
+          background-color: $obligatory-icon;
+          border: 1px solid black;
+          height: 2.5vw;
+          width: 2.5vw;
+          margin-right: 2%;
+        }
+        .circle{
           border-radius: 50%;
-          border: 1px solid white;
         }
-        .color-grey{
-          background-color: $item-color-2
+        .triangle{
+          background-color: transparent;
+          height: 0px;
+          width: 0px;
+          border: 0px;
         }
-        .color-blue{
-          background-color: $item-color-1;
+        .triangle:after,
+        .triangle:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
         }
-        .color-white{
-          background-color: white;
+        .triangle:after{
+          margin-top: -2.5%;
+          border-color: transparent transparent $obligatory-icon transparent;
+          border-width: 2.5vw 1.3vw;
+
         }
+        .triangle:before{
+          margin-top: -2.8%;
+          border-color: transparent transparent black transparent;
+          border-width: 2.7vw 1.4vw;
+          margin-left: -0.1%;
+        }
+
       }
     }
   }
 
 
+}
+
+///// item colors product ////
+.item-colors{
+    @extend %inlineblock;
+    @extend %fullwidth;
+    margin-bottom: 3%;
+
+  a{
+    @extend %inlineblock;
+    @extend %floatleft;
+    height: 1vw;
+    width: 1vw;
+    margin-right: 1%;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  .color-black{
+    background-color: $item-color-2
+  }
+  .color-blue{
+    background-color: $item-color-1;
+  }
+  .color-white{
+    background-color: white;
+  }
 }

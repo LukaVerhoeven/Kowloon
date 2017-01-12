@@ -1,0 +1,21 @@
+@media (min-width: $phone-width) and (max-width: $tablet-width ){
+  .cookie {
+    .dogbone{
+      height: 12vw;
+      width: 18vw;
+      margin-left: 20%;
+      margin-top: 12%;
+    }
+    .popup-cookie{
+      width: 37%;
+      padding: 6% 7% 4% 7%;
+      .escbut{
+        width: 3vw;
+        height: 3vw;
+        margin-top: -10%;
+        margin-right: -12%;
+      }
+  }
+  }
+
+}

@@ -1,13 +1,25 @@
-.other-products{
+.productdetail{
+  .other-products{
+  h1{
+    font-size: 1.6vw;
+    margin-top: 4.5%;
+  }
   .item-slider{
     @extend %inlineblock;
     overflow: hidden;
   .hot-item-list {
     width: 3000%;
     height: 11vw;
+    margin-top: 1%;
     li{
-      width: 14vw;
+      width: 16vw;
       margin-right: 0.5vw;
+      .img-overflow{
+        height: 10.5vw;
+      }
+      .overlay{
+        height: 7.8vw;
+      }
     }
 
   }
@@ -16,14 +28,29 @@
     @extend %fullbackground;
     background-image: $icons;
     cursor: pointer;
-    width: 4vw;
-    height: 4vw;
-    margin-top:5%;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-top:5.2%;
+    margin-left: 1%;
+  }
+  .prev{
+    background-position: 0% 0%;
+    background-size: 1097% 717%;
   }
   .next{
     margin-left: 72%;
-    background-position: 11%;
+    background-position: 10% 0%;
+    background-size: 1097% 717%;
 
   }
+}
+
+}
+.link{
+  margin-top: -1.8%;
+}
+.link:last-of-type{
+  margin-top: 1%;
+  margin-bottom: 1.5%;
 }
 }

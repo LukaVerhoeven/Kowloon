@@ -605,18 +605,82 @@ $(function() {
   $('#slides').slidesjs();
 });
 
-(function($, window, document) {
+var contentHeight = 250; // What is the height of the static content of the page?
+var curPage = 1; // What virtual 'page' of results are we on?
+var $console; // For showing debug info
 
+// Show a console message
+ function log(msg) {
+     $console.append('<p>' + msg + '</p>');
+     $console.animate({
+         scrollTop: 99999
+     }, "fast"); // Scroll to bottom
+ }
 
-$('.menu').click(function () {
-if ($( ".full-sidebar" ).hasClass( "hidden" )) {
-  $('.full-sidebar').removeClass('hidden');
-}else {
-  $('.full-sidebar').addClass('hidden');
+// Calculate the height of the scroll target based on page content
+function calcScrollTarget() {
+    var windowHeight = document.documentElement.clientHeight;
+    var bodyHeight = $(document).height();
+    var delta = bodyHeight - windowHeight - 50;
+    log('Scroll target: ' + bodyHeight + ' (body content) - ' + windowHeight + ' (browser height) - 50 (buffer) = ' + delta);
+    contentHeight = delta; // Update target amount
+    $('div#scroll_guide').height(delta); // Update guide
 }
 
-})
+// Load the next page of content
+function loadContent() {
+    if (curPage >= 5) {
+        // Cap results
+        contentHeight = 999999; // Move scroll target past end of page
+    } else {
+        // Simulate new results
+        // In reality this would be an AJAX call, likely
+        curPage++; // Next page
+        var $result = $('div#result_wrapper'); //.append('<p>Page ' + curPage + '</p>');
+        for (var i = 1; i <= 1; i++) {
+          var listItems = $(".scroll li").clone();
+            $result.append(listItems);
+        }
+        // $result.append('<p class="clear">.</p>');
+        calcScrollTarget(); // Update scroll target
+    }
+}
 
+$(document).ready(function() {
+    $console = $('div#console'); // Store for future use
+    // Create initial results
+    var $result = $('div#result_wrapper').html('');
+    for (var i = 1; i <= 21; i++) {
+
+        // $result.append('<div class="block">Result block ' + i + '</div>');
+    }
+    // $result.append('<p class="clear">.</p>');
+
+    calcScrollTarget(); // Set initial scroll target
+    $(window).resize(calcScrollTarget); // If browser size changes, recalculate scroll target
+
+    // monitor the window's scroll event
+    $(window).scroll(function() {
+        //log("Scroll detected: "+$(window).scrollTop()+".");
+        if ($(window).scrollTop() > contentHeight) {
+            log('Load more content');
+            loadContent();
+        }
+    });
+});
+
+(function($, window, document) {
+
+//grow sidebar
+$('.menu').click(fullsidebar);
+$('.hamburger').click(fullsidebar);
+
+function fullsidebar() {
+  $('.full-sidebar').toggleClass('hidden');
+
+}
+
+//sidebar fix
 var pageheight = $('body').height()
   $('.full-sidebar').css('height', pageheight);
 $( window ).resize(function() {
@@ -624,15 +688,85 @@ $( window ).resize(function() {
     $('.full-sidebar').css('height', pageheight);
 });
 
+//open searchmenu & FAQ menu
+$('.escbar a').click(function () {
+  $('.searchpage').addClass('hidden');
+  $('.FAQ-page').addClass('hidden');
+    $('.search').removeClass('searchactive');
+    $('.ask').removeClass('askactive');
+});
+$('.search').click(function () {
+  if (!$('.FAQ-page').hasClass('hidden')) {
+    $('.FAQ-page').addClass('hidden');
+      $('.ask').removeClass('askactive');
+  }
+  $('.searchpage').toggleClass('hidden');
+  $(this).toggleClass('searchactive');
+});
+$('.ask').click(function () {
+  if (!$('.searchpage').hasClass('hidden')) {
+    $('.searchpage').addClass('hidden');
+    $('.search').removeClass('searchactive');
+  }
+  $('.FAQ-page').toggleClass('hidden');
+  $(this).toggleClass('askactive');
+});
+
+
+//searchmenu click ( enter Icon)
+$('.searchdiv input').keyup(function(){
+  if( $(this).val().length >=1  ) {
+    console.log($(this).val().length);
+    $('.searchdiv i').addClass('hidden');
+  }else {
+    $('.searchdiv i').removeClass('hidden');
+  }
+});
+$('.searchdiv input').focusout(function(){
+  if( !$(this).val() ) {
+
+  }
+});
+
+////searchmenu reset ( cross Icon)
+$('.resultword a').click(function () {
+    $('.searchdiv input').val('');
+    $('.searchdiv i').removeClass('hidden');
+});
+
+//productview  price filter
+$('.price-filter-select').click(function (){
+  $('.price-filter').toggleClass('hidden');
+});
+$('.price-filter li a').click(function(){
+  var filter = $(this).text();
+  $('.price-filter-select option').text(filter);
+  $('.price-filter').addClass('hidden');
+});
+
+/// exit cookie
+$('.escbut').click(function (){
+  $('.cookie').addClass('hidden');
+});
+$('.saveCookie').click(function (){
+  document.cookie = "cookie is gezet";
+  $('.cookie').addClass('hidden');
+});
+
+
+
 
 })(jQuery, window, document);
 
 (function($, window, document) {
   var counter = 0;
-  var items = $(".hot-item-list").children().length;
+  var items = $(".hot-item-list:first-child").children().length;
   var elementwidth;
+  var lastScroll = false;
+  var lastScrollback = false;
 
   $( ".next" ).click(function() {
+  // scroll to the next list item
     if(counter<items-5){
 
       elementwidth = $(".hot-item-list li").width();
@@ -641,17 +775,41 @@ $( window ).resize(function() {
       }, 500 );
       counter++;
 
+  // scroll the last half item
+      if (counter===items-5) {
+        lastScroll = true;
+      }
+    }else if (lastScroll) {
+      lastScroll = false;
+      lastScrollback = true;
+
+      elementwidth = $(".hot-item-list li").width();
+      $( ".hot-item-list" ).animate({
+        marginLeft: "-="+elementwidth/1.7 +"px",
+      }, 500 );
+
     }
+
   });
+
 
   $( ".prev" ).click(function() {
       if(counter>0){
-
+    // scrollback the last half item
+        if (lastScrollback) {
+          lastScrollback = false;
+          elementwidth = $(".hot-item-list li").width();
+          $( ".hot-item-list" ).animate({
+            marginLeft: "+="+elementwidth/1.7 +"px",
+          }, 500 );
+        }else{
+    //scroll back one list item
         elementwidth = $(".hot-item-list li").width();
         $( ".hot-item-list" ).animate({
           marginLeft: "+="+elementwidth +"px",
         }, 500 );
         counter--;
+      }
 
       }
   });
@@ -668,16 +826,20 @@ $( window ).resize(function() {
 
   var target = event.target;
   var slider = $(target).parent().find('.filterdiv');
+  var p = $(slider).find('p');
+  classToggle(slider, p);
 
-  classToggle(slider);
 
+  function classToggle(sliderElement, textElement){
+    // if ( sliderElement.hasClass('closed') ) {
 
-  function classToggle(sliderElement){
-    if ( sliderElement.hasClass('closed') ) {
+      if (p.length > 0) {
+        textElement.toggleClass('hidden');
+      }
       sliderElement.toggleClass('closed');
-    } else {
-      sliderElement.toggleClass('closed');
-    }
+    // } else {
+    //   sliderElement.toggleClass('closed');
+    // }
   }
 
   });
@@ -686,33 +848,58 @@ $( window ).resize(function() {
 
 })(jQuery, window, document);
 
+// (function($, window, document) {
+// var slideIndex = 1;
+// showDivs(slideIndex);
+//
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
+//
+// function currentDiv(n) {
+//   showDivs(slideIndex = n);
+// }
+//
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//      dots[i].className = dots[i].className.replace(" w3-white", "");
+//   }
+//   x[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " w3-white";
+// }
+//
+// })(jQuery, window, document);
+
 (function($, window, document) {
-var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+  if (document.cookie.indexOf("visited") <= 0) {
+    // first time here
+    $('.cookie').removeClass('hidden');
+    
+    }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-white";
-}
+
+  /// exit cookie menu & set cookie
+  $('.escbut').click(function (){
+    $('.cookie').addClass('hidden');
+  });
+  $('.saveCookie').click(function (){
+    // set a new cookie
+    expiry = new Date();
+    expiry.setTime(expiry.getTime()+(10*60*1000));
+    document.cookie = "visited=yes; expires=" + expiry.toGMTString();
+    $('.cookie').addClass('hidden');
+  });
+
 
 })(jQuery, window, document);
 

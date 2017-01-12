@@ -1,0 +1,40 @@
+@media (max-width:  $phone-width){
+  #body{
+    .about{
+      nav{
+        img{
+          width: 6%;
+        }
+        a{
+          width: 19%;
+        }
+      }
+
+    }
+    h2{
+        font-size: 5vw;
+
+    }
+    .kowloon{
+      width: 90%;
+    }
+    .contact{
+      width: 95%;
+    }
+
+    .message{
+      textarea,input{
+        width: 95%;
+      }
+      input:last-child{
+        width: 100%;
+      }
+      h2{
+        margin: 8% 0px;
+      }
+      label{
+        margin-bottom: 3%;
+      }
+    }
+  }
+}

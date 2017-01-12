@@ -10,16 +10,21 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="/css/all.css" />
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         @yield('css')
 
     </head>
-    <body>
+    <body id="body">
 
-      <div class="sidebar">
+      <div class="hamburger mobile-only">
+
+      </div>
+      <div class="sidebar no-mobile">
         <ul>
           <li><a href="#"><i class="menu"></i></a></li>
           <li><a href="#"><i class="search"></i></a></li>
           <li><a href="#"><i href="#" class="ask"></i></a></li>
+          <li><a href="about"><i href="#" class="about-icon"></i></a></li>
           <li class="line"></li>
         </ul>
         <ul class="catergory-menu">
@@ -39,6 +44,7 @@
             <li><a href="#"><i class="menu"></i></a></li>
             <li><a href="#"><i class="search"></i><p>Search</p></a></li>
             <li><a href="#"><i href="#" class="ask"></i><p>FAQ</p></a></li>
+            <li><a href="about"><i href="#" class="about-icon"></i><p>About</p></a></li>
             <li class="line"></li>
           </ul>
           <ul class="catergory-menu">
@@ -57,9 +63,14 @@
         @yield('content')
       </div>
       @include('search')
+      @include('FAQ')
+      @include('cookie')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        {{-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> --}}
       	<script src="/js/all.js"></script>
         <script src="/js/priceslider.js"></script>
+
           @yield('script')
 
     </body>

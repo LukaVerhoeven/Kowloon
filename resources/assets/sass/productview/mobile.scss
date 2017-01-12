@@ -1,0 +1,158 @@
+@media (max-width:  $phone-width){
+
+
+
+  #body{//only productview
+    .productview{
+      h1{
+        margin: 8% 0px;
+      }
+      h2{
+        margin: 4% 0px;
+      }
+      .filter{
+        margin: 6% 0px;
+      }
+    }
+
+    //nav
+    nav {
+      img{
+        width: 5%;
+      }
+      a:first-of-type{
+        width: 14.2%;
+      }
+      a{
+        padding-right: 2%;
+      }
+      .circle{
+        height: 1.7vw;
+        width: 1.7vw;
+        margin-top: 10.5%;
+      }
+      .triangle{
+        border-top: 2.8vw solid transparent;
+        border-right: 2.8vw solid #323232;
+        border-bottom: 2.8vw solid transparent;
+      }
+
+    }
+    //filter
+    button{
+      padding-left: 0px;
+    }
+    .filterdiv{
+      max-height: 95vw;
+      width: 100%;
+      margin-left: 0px;
+      h2{
+        font-size: 4vw;
+      }
+      .checkbox{
+        width: 48%;
+        margin-bottom: 7%;
+        label:before{
+          border: 1px solid #9a9a9a;
+          height: 4vw;
+          width: 4.5vw;
+          font-size: 2.8vw;
+        }
+      }
+
+      //slider
+      .slider{
+        width: 93%;
+        margin-bottom: 10%;
+        .ui-slider-horizontal{
+          height: 6vw;
+        }
+        .ui-slider-handle{
+          height: 5vw;
+          width: 5vw;
+        }
+
+      }
+      //inputs
+      .price-input {
+        span{
+          font-size: 5.1vw;
+          margin-top: 2.5%;
+          margin-left: 2%;
+        }
+        input{
+          width: 23vw;
+          height: 11vw;
+          padding-left: 12vw;
+          margin-bottom: 10%
+        }
+      }
+      .dash{
+        padding-top: 5vw;
+      }
+    }
+    //items
+    .items{
+      .select{
+        margin: 5% 0px;
+        width: 100%;
+        .price-filter-select{
+          width: 100%;
+          height: 10.3vw;
+        }
+      }
+    }
+    .price-filter{
+      width: 88.5vw;
+    }
+  .productview{
+    .hot-item-list{
+      width: 100%;
+      display: inline-block;
+        height: 100%;
+      li{
+        height: 75vw;
+        width: 100%;
+        .img-overflow{
+          height: 62vw;
+        }
+        .overlay{
+          height: 46vw;
+          margin-top: -71.5%;
+          .product-icon{
+            height: 30vw;
+            width: 40vw;
+          }
+        }
+        p{
+          font-size: 5vw;
+        }
+        .corner{
+          height: 75vw;
+          border-top: 1.5vw solid #cfcfcf;
+          border-right: 1.5vw solid #cfcfcf;
+          .corner2{
+            height: 97.5%;
+            border-top: 1.5vw solid #818181;
+            border-right: 1.5vw solid #818181;
+            margin-top: 0.8%;
+            margin-left: -6.5%;
+          }
+        }
+        .stack{
+           height: 72vw;
+            margin-top: -81.9%;
+            width: 84vw;
+            .overlay{
+              height: 47vw;
+              margin-top: -76.5%;
+            }
+        }
+      }
+      #result_wrapper{
+        width: 89vw;
+      }
+    }
+  }
+  }
+}

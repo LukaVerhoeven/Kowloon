@@ -18,7 +18,7 @@ nav{
     @extend %no-text-decoration;
     color:$breadpointers-text;
     background-color: $breadpointers-bg;
-    font-size: 1.1vw;
+    font-size:map-get($type-scale, scale1);
     padding: 0.4% 0.7% 0.4% 1%;
     border-top-right-radius: 8%;
     border-bottom-right-radius: 8%;
@@ -51,7 +51,7 @@ nav{
 .filter{
   @extend %choplinmedium;
   @extend %colorwhite;
-  font-size: 1.2vw;
+  font-size: map-get($type-scale, scale2);
   background-color: rgba(255, 255, 255, 0);
   border: none;
 }
@@ -85,7 +85,7 @@ nav{
       min-width: 8%;
     }
     label{
-      font-size: 1.3vw;
+      font-size: map-get($type-scale, scale3);
       cursor: pointer;
       display: inline-block;
       width: 122%;
@@ -99,7 +99,7 @@ nav{
       content: "\00a0";
       display: inline-block;
       font: 16px/1em sans-serif;
-      font-size: 0.8vw;
+      font-size:  map-get($type-scale, scale-2);
       background-size: 0.85vw 1vw;
       height: 1vw;
       margin: -0.5% 0.8vw 0 0;
@@ -167,10 +167,10 @@ nav{
     @extend %absolute;
     @extend %block;
     margin-left: 1%;
-    font-size: 1.1vw;
+    font-size:  map-get($type-scale, scale1);
   }
   input{
-    font-size: 1.1vw;
+    font-size:  map-get($type-scale, scale1);
     font-family: arial;
     padding-left: 5vw;
     height: 3vw;
@@ -219,9 +219,64 @@ nav{
   }
 }
 
-//dotfix
-@media screen and (max-width: 1500px) {
-  .ui-slider-handle{ //dots
-    top:-40% !important;
+
+
+
+//fixes filter
+$loop: 6;
+$step: 150px;
+$maxWidth:1500px;
+$minWidth: $maxWidth - $step;
+$top: -60%;
+$top-step: 10%;
+$price-margin: 0.3%;
+$price-step: 0.05%;
+$triangle:-2.8%;
+
+@while($loop > 0){
+  $loop: $loop - 1;
+  @if($loop==0){
+    $minWidth :0;
   }
+  @media (min-width: $minWidth) and (max-width: $maxWidth ){
+    #slider{
+      .ui-slider-handle{ //dots
+        top:$top !important;
+      }
+    }
+    #slider2{
+      .ui-slider-handle{ //dots
+        top:$top - 15% !important;
+      }
+    }
+      .price-input{
+        span{
+          margin-top: $price-margin;
+        }
+      }
+      .triangle:before{
+        margin-top:$triangle;
+      }
+  }
+  $top: $top + $top-step;
+  $triangle: $triangle + $price-step;
+  $price-margin: $price-margin + $price-step;
+  $maxWidth: $maxWidth - $step;
+  $minWidth: $minWidth - $step;
+
 }
+
+// @media ( max-width: 1300px) {
+//   .price-input{
+//     span{
+//       margin-top: 0.3%;
+//     }
+//   }
+//
+// }
+// @media (min-width:1250px) and (max-width: 1500px) {
+//   .ui-slider-handle{ //dots
+//     top:-50% !important;
+//   }
+//
+// }

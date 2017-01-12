@@ -7,7 +7,7 @@
     @extend %colorwhite;
     @extend %alignleft;
     @extend %choplinmedium;
-    font-size: map-get($type-scale, title);
+    font-size: map-get($type-scale, scale29);
     font-weight:lighter;
     margin-bottom: 1%;
   }
@@ -23,39 +23,6 @@
   height: map-get($heights, hot-item);
   margin-top: 2%;
 
-  .corner{
-    padding-top: 0.3%;
-    padding-right: 1%;
-    height: 97.9%;
-    width: 20%;
-    margin-left: 77.5%;
-    background-color: $content-backgroundcolor;
-    border-top: 0.4vw solid  $img-stack2;
-    border-right: 0.4vw solid  $img-stack2;
-  }
-  // div.corner3{
-  //   @extend %fullheight;
-  //   width: 97.5%;
-  //   padding-top: 1.2%;
-  //   background-color: $content-backgroundcolor;
-  // }
-  // div.corner4{
-  //   @extend %fullheight;
-  //   width:  97.5%;
-  //   background-color: $content-backgroundcolor;
-  // }
-  div.corner2{
-    @extend %nopadding;
-    // @extend %absolute;
-    margin-left: -8%;
-    width:  107%;
-    background-color:$content-backgroundcolor;
-    height: 96%;
-    right: 3%;
-    top:50%;
-    border-top: 0.4vw solid  $img-stack1;
-    border-right: 0.4vw solid  $img-stack1;
-  }
   li:last-of-type{
     margin-right: 0%;
   }
@@ -69,28 +36,42 @@
     margin-right: 0.5%;
     background-color: $hot-item-tile-color;
     border: 1px solid $hot-item-tile-border-color;
-    .img{
-      @extend %fullbackground;
-      width: map-get($widths, hot-item-img);
-      height: map-get($heights, hot-item-img);
-      margin-left: 1.5%;
-      margin-top: 2%;
-      background-image: url(/img/dogmat.jpg);
+    .img-overflow{
+      width: 97%;
+      height: 12vw;
+      margin: 1.5%;
+      img{
+        margin-top: -106%;
+        margin-left: -108%;
+        width: 244%;
+      }
+
     }
     .overlay{
       @extend %fullwidth;
       @extend %fullheight;
       background-color: #ff6f9e;
+      padding-top: 18%;
+      width: 97%;
+      height: 8.8vw;
+      margin: 1.5%;
       opacity: 0;
-      img{
-        margin-top: 20%;
-        width:  map-get($widths , hot-overlay-img);
+      margin-top: -68%;
+      .product-icon{
+        @extend %block;
+        margin: auto;
+        width: 7vw;
+        height: 5vw;
+        background-size: 944% 750%;
+        background-position: 132% 0%;
+        background-image: $icons;
+
       }
       p{
         @extend %centertext;
         @extend %colorwhite;
         font-weight: lighter;
-        font-size: map-get($type-scale , hot-overlay-text);
+        font-size: map-get($type-scale , scale6);
       }
     }
     .overlay:hover{
@@ -102,7 +83,7 @@
       @extend %alignleft;
       @extend %colorwhite;
       margin-top: 1.5%;
-      font-size:  map-get($type-scale , hot-item-text);
+      font-size:  map-get($type-scale , scale2);
       margin-left: 5%;
       margin-right: 5%;
       width:  map-get($widths , hot-text);
@@ -112,25 +93,71 @@
         font-weight: normal;
       }
     }
-    &:last-of-type{
-
-    }
 
   }
-  .stack{
-    height: 92%;
-    width: 22.3%;
-    margin-top: 1.6%;
-    .img{
-      @extend %inlineblock;
-      background-image: url(/img/hotdog.jpg);
-      height: 78%;
-      img{
-        margin-top: 11%;
+  ///// stack item ///////
+  .stack-list{
+    border: 0px;
+    background-color: transparent;
+    .stack{
+      height: 13.9vw;
+      width: 17vw;
+      margin-top: -77.9%;
+      border: 1px solid #717171;
+      background-color: #565656;
+      .stack-icon{
+        @extend %block;
+        @extend %absolute;
+        width: 2.5vw;
+        height: 2.5vw;
+        background-size: 1360% 780%;
+        background-position: 14% 20%;
+        margin-left: 0.5%;
+        margin-top: 0.5%;
+        background-image: $icons;
+      }
+      .img-overflow{
+        height: 78%;
+      }
+      .overlay{
+        margin-top: -66%;
+        height: 56%;
+      }
+      p{
+        margin-top: 0%;
       }
     }
-    p{
-      margin-top: 3%;
+    .corner{
+      padding-right: 1%;
+      height: 14.75vw;
+      width: 88%;
+      margin-left: 10%;
+      background-color: $content-backgroundcolor;
+      border-top: 0.4vw solid  $img-stack2;
+      border-right: 0.4vw solid  $img-stack2;
+    }
+    div.corner2{
+      @extend %nopadding;
+      margin-top: 1.1%;
+      margin-left: -7%;
+      width:  104.5%;
+      background-color:$content-backgroundcolor;
+      height: 96.5%;
+      border-top: 0.4vw solid  $img-stack1;
+      border-right: 0.4vw solid  $img-stack1;
     }
   }
+}
+
+///// img-overflow ///
+.img-overflow{
+  overflow: hidden;
+}
+
+
+/// item-colors ///
+.item-colors{
+  @extend %absolute;
+  width: 31%;
+  margin: 0.7% 0.7%;
 }

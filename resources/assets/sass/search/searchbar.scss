@@ -1,0 +1,99 @@
+//////// search bar ///////
+
+  .searchdiv{
+    @extend %inlineblock;
+    margin: 10% 0% 0% 10%;
+    width: 69.4vw;
+    label{
+      @extend %absolute;
+      @extend %block;
+      background-image: $icons;
+      height: 3vw;
+      width: 3vw;
+      background-position: 57% -2%;
+      background-size: 1117% 621%;
+    }
+    input{
+      @extend %fullwidth;
+      padding: 0px 1px 1% 4vw;
+      color: $searchbarcolor;
+      border: none;
+      font-size: map-get($type-scale, scale30);
+      font-weight: bolder;
+      background-color: rgba(255, 255, 255, 0);
+      border-bottom: 2px solid black;
+
+    }
+
+        input::-webkit-input-placeholder {
+        color: $searchbarcolor ;
+        }
+
+        input:-moz-placeholder { /* Firefox 18- */
+        color: $searchbarcolor ;
+        }
+
+        input::-moz-placeholder {  /* Firefox 19+ */
+        color: $searchbarcolor ;
+        }
+
+        input:-ms-input-placeholder {
+        color: $searchbarcolor ;
+        }
+
+    input:focus{
+       outline: none;
+    }
+    .icon-enter{
+        @extend %absolute;
+        @extend %block;
+        background-image: $icons;
+        height: 3vw;
+        width: 3vw;
+        background-position: 69% -2%;
+        background-size: 1117% 621%;
+        margin-top: -4%;
+        margin-left: 39%;
+    }
+}
+
+////searchpage ////
+
+///// word result & reset button /////
+  .resultword{
+    margin-top: 1%;
+    margin-left: 10%;
+    width: 78%;
+    p{
+      @extend %inlineblock;
+    }
+    a{
+      @extend %black;
+      float: right;
+      text-decoration: none;
+      margin-top: 1%;
+      cursor: pointer;
+      .cross{
+        @extend %block;
+        @extend %floatleft;
+        width: 2vw;
+        height: 2vw;
+        background-size: 857% 551%;
+        background-position: 80.5% -3%;
+        background-image: $icons;
+        margin-top: -10%;
+      }
+    }
+  }
+////// results //////
+  .results{
+    .result-item{
+      height: 10vw;
+      width: 78%;
+      background-color: white;
+      margin-left: 10%;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1%;
+    }
+
+  }

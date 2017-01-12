@@ -13,7 +13,7 @@
       <img class="bannerimg" src="/img/banners/about.jpg" alt="bannerimage of a person that hugs a dog for kowloon">
     </div>
 
-    <div class="content about">      
+    <div class="content about">
       <nav>
         <img src="img/white-k.png" alt="the k of the kownloon logo">
         <span class="triangle"></span><a href="#">about us</a>
@@ -46,7 +46,7 @@
           </form>
         </div>
         <div class="FAQ">
-          <h1>FREQUENTLY ASKED QUESTIONS</h1>
+          <h2>FREQUENTLY ASKED QUESTIONS</h2>
           <div class="question">
             <button class="filter">Dit is een vraag</button>
             <div class="filterdiv closed">

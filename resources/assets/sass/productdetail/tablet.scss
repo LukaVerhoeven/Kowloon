@@ -1,0 +1,84 @@
+@media (min-width: $phone-width) and (max-width: $tablet-width ){
+  #body{
+    .item-colors a{
+      width: 2vw;
+      height: 2vw;
+    }
+  }
+  #body .productdetail{
+    h2{
+      font-size: 2.7vw;
+      font-weight: lighter;
+    }
+    h1{
+      font-size: 3vw;
+    }
+//imgview
+    .product{
+      display: inline-block;
+      height: 100%;;
+    }
+    .imgview{
+      height: 39.3vw;
+      width: 100%;
+      .bigtile{
+        height: 37.5vw;
+        width: 75%;
+        .plus-icon{
+          margin-left: 61.5%;
+          width: 5vw;
+          height: 5vw;
+        }
+      }
+    }
+    .smalltile{
+      width: 21%;
+      .img-overflow{
+        height: 9.3vw;
+        img{
+          margin-top: -28%;
+          height: 19vw;
+        }
+      }
+      .tile-overlay {
+        width: 18.7%;
+        margin: 0.7%;
+        height: 9.3vw;
+      }
+    }
+//text bij img
+    .product-info{
+      height: 30vw;
+      width: 100%;
+      .left-tablet, .right-tablet{
+        width: 50%;
+      }
+      h3,p,.left-tablet,.right-tablet{
+        float: left;
+      }
+      .right-tablet{
+        text-align: right;
+        h3{
+          text-align: right;
+        }
+        .item-colors a{
+          float: right;
+        }
+      }
+      h3{
+        margin: 2% 0% 0% 0%;
+      }
+      h3,p{
+        width: 100%;
+      }
+      p{
+        margin-bottom: 2%;
+      }
+    }
+    .hot-item-list{
+      li{
+        margin-right: 0.5vw;
+      }
+    }
+  }
+}
