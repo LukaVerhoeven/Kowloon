@@ -88,7 +88,7 @@
         }
       }
       .dash{
-        padding-top: 5vw;
+            padding: 3vw 8vw;
       }
     }
     //items
@@ -118,7 +118,7 @@
         }
         .overlay{
           height: 46vw;
-          margin-top: -71.5%;
+          margin-top: -68.5%;
           .product-icon{
             height: 30vw;
             width: 40vw;
@@ -140,12 +140,18 @@
           }
         }
         .stack{
-           height: 72vw;
-            margin-top: -81.9%;
-            width: 84vw;
+          height: 72vw;
+          margin-top: -77.5%;
+            width: 88vw;
+            .stack-icon{
+              width: 11vw;
+              height: 11vw;
+              margin-left: 1.5%;
+              margin-top: 1.5%;
+            }
             .overlay{
-              height: 47vw;
-              margin-top: -76.5%;
+              height: 46vw;
+              margin-top: -72.2%;
             }
         }
       }

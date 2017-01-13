@@ -8,6 +8,7 @@
 
   var target = event.target;
   var slider = $(target).parent().find('.filterdiv');
+  var button = $(target).parent().find('.filter');
   var p = $(slider).find('p');
   classToggle(slider, p);
 
@@ -19,6 +20,7 @@
         textElement.toggleClass('hidden');
       }
       sliderElement.toggleClass('closed');
+      button.toggleClass('point-right');
     // } else {
     //   sliderElement.toggleClass('closed');
     // }

@@ -27,3 +27,5 @@ Route::get('/productview', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::post('/subscriber', 'Controller@addSubscriber');

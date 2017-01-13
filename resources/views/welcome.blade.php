@@ -89,10 +89,13 @@
             <h4>only in our newsletter</h4>
           </div>
           <div class="news-form">
-            <h3>Subscribe to our newsletter</h3>
-            <p>Lorum ipsum dolor sit amet..</p>
-            <input type="text" name="" value="Domain @ name.com">
-            <input type="submit" name="" value="OK">
+            <form class="" action="/subscriber" method="post">
+              {{ csrf_field() }}
+              <h3>Subscribe to our newsletter</h3>
+              <p>Lorum ipsum dolor sit amet..</p>
+              <input type="text" name="email" value="Domain @ name.com">
+              <input type="submit" name="" value="OK">
+            </form>
           </div>
 
         </div>

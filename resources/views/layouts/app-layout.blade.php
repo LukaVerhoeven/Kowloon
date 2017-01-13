@@ -28,7 +28,7 @@
           <li class="line"></li>
         </ul>
         <ul class="catergory-menu">
-          <li><a href="/dogs"><i class="dog"></i></a></li>
+          <li><a href="/dogs"><i class="dog @yield('active')"></i></a></li>
           <li><a href="#"><i class="cat"></i></a></li>
           <li><a href="#"><i class="fish"></i></a></li>
           <li><a href="#"><i class="bird"></i></a></li>
@@ -70,7 +70,17 @@
         {{-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> --}}
       	<script src="/js/all.js"></script>
         <script src="/js/priceslider.js"></script>
+        {{-- google analitics --}}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+            ga('create', 'UA-90269735-1', 'auto');
+            ga('send', 'pageview');
+
+          </script>
           @yield('script')
 
     </body>

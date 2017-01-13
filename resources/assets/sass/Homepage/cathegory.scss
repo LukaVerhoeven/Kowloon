@@ -1,4 +1,7 @@
 //////// cathegory //////
+.text p{
+  @extend %centertext;
+}
 .catergory-content{
   @extend %fullwidth;
   @extend %inlineblock;
@@ -10,13 +13,13 @@
     @extend %fullheight;
     width: map-get($widths, cathegory-list-width);
     a{
-      height: map-get($heights, cathegory-link);
       @extend %fullwidth;
       @extend %fullheight;
       @extend %block;
-      @extend %fullbackground;
       @extend %floatleft;
-      background-image: $homepage-sprite-img;
+      background-image: $icons;
+      height: 80%;
+      background-size: 420%;
     }
     img{
       max-width: map-get($widths, cathegory-img-width);
@@ -51,20 +54,37 @@
   }
 }
 .dog-content{
-  background-position: 62%;
+background-position: 60% 70%;
+  &:hover{
+    background-position: 60% 101.4%;
+  }
 }
 .cat-content{
-  background-position: 82%;
+  background-position: 81% 70%;
+  &:hover{
+    background-position: 81% 101.4%;
+  }
 }
 .fish-content{
-  background-position: 39%;
+  background-position: 37% 70%;
+
+  &:hover{
+    background-position: 37% 101.4%;
+  }
 }
 .bird-content{
-  background-position: 104%;
+  background-position: 103% 70%;
+  &:hover{
+    background-position: 103% 101.4%;
+  }
 }
 .rat-content{
-  background-position: 17%;
+  background-position: 16% 70%;
+  &:hover{
+    background-position: 16% 101.4%;
+    background-repeat: no-repeat;
+  }
 }
 .other-content{
-  background-position: -4%;
+  background-position: 126% 71%;
 }

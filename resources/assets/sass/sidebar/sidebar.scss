@@ -1,8 +1,16 @@
 //////////sidebar///////////
 .full-sidebar{
-  @extend %absolute;
+  @extend %relative;
+  @extend %inlineblock;
+  margin-left: -5%;
+  // margin-left: -2%;
   width: $extra-sidebar-width;
   z-index: 20;
+  .sidebar{
+    width: 17vw;
+    // width: 32vw;
+    margin-left: 5%;
+  }
   i{
     // @extend %inlineblock;
     @extend %floatleft;
@@ -46,10 +54,11 @@
     @extend %menusize;
 
     &.full-kowloon{
-      background-image: $menu-kowloon-grey-img;
+      background-image: $kowloons;
+      background-position: 40.5% 60%;
+      background-size: 138%;
       width:  map-get($widths, bottom-img);
       margin: 0% 10% 0% 10%;
-      background-size: 100%;
     }
   }
   .line{
@@ -66,8 +75,9 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-burger-position;
+  background-image: $icons;
+  background-position: 100% 41%;
+  background-size: 787%;
 
 }
 .search{
@@ -76,8 +86,9 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-search-position;
+  background-image: $icons;
+  background-position: 14% 41%;
+  background-size: 772%;
 }
 .about-icon{
   @extend %fullwidth;
@@ -86,7 +97,7 @@
   @extend %center-background-image;
   @extend %fullbackground;
   background-image: $icons;
-  background-position: 56.28% 20%;
+  background-position: 71.5% 17%;
   background-size: 667%;
 }
 .ask{
@@ -95,8 +106,9 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-ask-position;
+  background-image: $icons;
+  background-position: 0% 41%;
+  background-size: 772%;
 }
 
 .dog{
@@ -105,17 +117,29 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-dog-position;
+  background-image: $icons;
+  background-position: 28% 41%;
+  background-size: 772%;
+  &.active-dog,&:hover{
+    background-position: 59.2% 71%;
+    background-size: 508%;
+
+  }
 }
+
 .cat{
   @extend %fullwidth;
   @extend %fullheight;
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-cat-position;
+  background-image: $icons;
+  background-position: 85.5% 41%;
+  background-size: 772%;
+  &:hover,&.active-cat{
+    background-position: 77.8% 70.8%;
+    background-size: 508%;
+  }
 }
 .fish{
   @extend %fullwidth;
@@ -123,8 +147,13 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-fish-position;
+  background-image: $icons;
+  background-position: 57% 41%;
+  background-size: 772%;
+  &:hover,&.active-fish{
+    background-position: 37.4% 70.5%;
+    background-size: 526%;
+  }
 }
 .bird{
   @extend %fullwidth;
@@ -132,8 +161,13 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-bird-position;
+  background-image: $icons;
+  background-position: 71% 41%;
+  background-size: 772%;
+  &:hover,&.fish-bird{
+    background-position: 97.2% 68.5%;
+    background-size: 680%;
+  }
 }
 .rats{
   @extend %fullwidth;
@@ -141,8 +175,13 @@
   @extend %block;
   @extend %center-background-image;
   @extend %fullbackground;
-  background-image: $menu-sprite-img;
-  background-position: $menu-rat-position;
+  background-image: $icons;
+  background-position: 42.5% 41%;
+  background-size: 772%;
+  &:hover,&.active-rats{
+    background-position: 17.8% 71%;
+    background-size: 570%;
+  }
 }
 .kowloon-menu{
   @extend %fullheight;
@@ -150,7 +189,9 @@
   @extend %center-background-image;
   @extend %fullbackground;
   @extend %absolute;
-  background-image: $menu-k-grey-img;
+  background-image: $kowloons;
+  background-position: -10.5% 114%;
+  background-size: 302%;
   bottom: 0px;
 }
 

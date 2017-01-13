@@ -27,7 +27,10 @@ elixir(mix => {
     '/jquery.slides.js',
     // '/priceslider.js',
     'infinitescroll.js',
+    'filter.js',
+
     '/sidebar-menu.js',
+      'active-tile.js',
     '/slider-detail.js',
     '/foldout-filter.js',
     '/slider.js',

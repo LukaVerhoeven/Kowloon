@@ -137,6 +137,16 @@
         // margin-bottom: -4%;
         padding: 3% 0px;
       }
+      button:after{
+        margin-top: -4.5%;
+        right: 6vw;
+        border-width: 2vw 1.8vw;
+      }
+      button.point-right:after{
+        border-width: 1.8vw 2vw;
+      right: 5.4vw;
+      margin-top: -5%;
+      }
       p{
         margin-top: 3%;
       }

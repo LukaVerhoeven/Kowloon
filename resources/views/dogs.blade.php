@@ -12,7 +12,7 @@
     {{-- <script src="/js/foldout-filter.js"></script> --}}
   @endsection
   @section('content')
-
+@section('active', 'active-dog')
     <img class="imgoverlay" src="/img/kowloonLogo.png" alt="kowloon Logo">
     <div class="container">
       <div id="slides">
@@ -37,19 +37,19 @@
           <div class="filterdiv">
             <h2>By collection</h2>
             <div class="checkboxlist">
-              <div class="checkbox "><input id="splash" type="checkbox" name="splash" value="Splash 'n Fun"> <label for="splash">Splash 'n Fun</label></div>
-              <div class="checkbox "><input id="luxury" type="checkbox" name="luxury" value="Luxury"><label for="luxury">Luxury</label></div>
-              <div class="checkbox "><input id="new" type="checkbox" name="new" value="new"><label for="new" >new</label></div>
-              <div class="checkbox "><input id="onsale" type="checkbox" name="onsale" value="on sale"><label for="onsale">on sale</label></div>
-              <div class="checkbox "><input id="other" type="checkbox" name="other" value="other"><label for="other" >other</label></div>
+              <div class="checkbox "><input id="splash" type="checkbox" name="splash" value="Splash 'n Fun"> <label for="splash" id="splash-sort">Splash 'n Fun</label></div>
+              <div class="checkbox "><input id="luxury" type="checkbox" name="luxury" value="Luxury"><label for="luxury" id="luxury-sort">Luxury</label></div>
+              <div class="checkbox "><input id="new" type="checkbox" name="new" value="new"><label for="new"  id="new-sort">new</label></div>
+              <div class="checkbox "><input id="onsale" type="checkbox" name="onsale" value="on sale"><label for="onsale" id="sale-sort">on sale</label></div>
+              <div class="checkbox "><input id="other" type="checkbox" name="other" value="other"><label for="other" id="other-sort">other</label></div>
             </div>
             <h2>Price range</h2>
             <div class="slider">
               <div id="slider"></div>
             </div>
-            <div class="price-input"><span>€</span><input type="number" name="min-value" value="0.00" class="min-price" step='0.01'></div>
+            <div class="price-input"><span>€</span><input type="number" name="min-value" value="0.00" class="min-price" step='0.01' id="min-price"></div>
             <span class="dash">-</span>
-            <div class="price-input"><span>€</span><input type="number" name="max-value" value="499.00" class="max-price" step='0.01'></div>
+            <div class="price-input"><span>€</span><input type="number" name="max-value" value="499.00" class="max-price" step='0.01' id="max-price"></div>
           </div>
         </div>
 
@@ -62,10 +62,10 @@
               <option value="oldest">Oldest</option> --}}
             </select>
             <ul class="price-filter hidden">
-              <li><a>Price: low to high</a></li>
-              <li><a>Price: high to low</a></li>
-              <li><a>Latest</a></li>
-              <li><a>Oldest</a></li>
+              <li><a id="lowhigh">Price: low to high</a></li>
+              <li><a id="highlow">Price: high to low</a></li>
+              <li><a id="latest">Latest</a></li>
+              <li><a id="oldest">Oldest</a></li>
             </ul>
           </div>
 
@@ -79,33 +79,33 @@
 
             <div class="scroll">
 
-            <li><div class="img-overflow">
+            <li data-cathegory="splash-sort" data-date="2016-12-15"><div class="img-overflow">
+              <div class="item-colors" >
+                <a href="#" class="color-white"></a>
+                <a href="#" class="color-black"></a>
+                <a href="#" class="color-blue"></a>
+              </div>
+              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 16,49</span></p></li>
+            <li  data-cathegory="luxury-sort new-sort" data-date="2016-12-16"><div class="img-overflow">
+              <div class="item-colors">
+                <a href="#" class="color-white"></a>
+                <a href="#" class="color-black"></a>
+                <a href="#" class="color-blue"></a>
+              </div>
+              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 13,49</span></p></li>
+            <li class="no-tablet" data-cathegory="new-sort" data-date="2016-12-13"><div class="img-overflow">
               <div class="item-colors">
                 <a href="#" class="color-white"></a>
                 <a href="#" class="color-black"></a>
                 <a href="#" class="color-blue"></a>
               </div>
               <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li><div class="img-overflow">
-              <div class="item-colors">
-                <a href="#" class="color-white"></a>
-                <a href="#" class="color-black"></a>
-                <a href="#" class="color-blue"></a>
-              </div>
-              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-            <li class="no-tablet"><div class="img-overflow">
-              <div class="item-colors">
-                <a href="#" class="color-white"></a>
-                <a href="#" class="color-black"></a>
-                <a href="#" class="color-blue"></a>
-              </div>
-              <a href="/productview"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay"><i class="product-icon"></i><p>view details</p></div></a> <p>Cooling mat <span class="prijs">€ 15,49</span></p></li>
-              <li class="stack-list">
+              <li class="stack-list" data-cathegory="sale-sort" data-date="2016-12-14">
                 <div class="corner"><div class="corner2"></div></div>
-                <div class="stack"><i class="stack-icon"></i><div class="img-overflow"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay">
-                <i class="product-icon"></i><p>view details</p></div> <p>Cooling mat <span class="prijs">€ 15,49</span></p></div>
+                <div class="stack"><a href="/productview"><i class="stack-icon"></i><div class="img-overflow"><img src="/img/products/product1.jpg" alt="info kader"></div><div class="overlay">
+                <i class="product-icon"></i><p>view details</p></div> </a> <p>Cooling mat <span class="prijs">€ 14,49</span></p></div>
               </li>
-              
+
               </div>
               <div id="result_wrapper">
 

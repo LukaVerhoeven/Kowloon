@@ -2,6 +2,10 @@
   .searchpage, .FAQ-page, {
     width: 93.3%;
     margin-left: -93.3%;
+    .escbar{
+      width: 6%;
+
+    }
   }
 
   #body .searchpage{
@@ -16,15 +20,10 @@
     .advancedFilter{
       width: 84%;
     }
-    .escbar{
-      width: 6%;
-      a{
-        background-size: 1847% 961%;
-      }
-    }
+
 //checkboxes
     .filterdiv {
-      max-height: 40vw;
+      max-height: 27vw;
       .checkboxlist{
         width: 70vw;
         .checkbox{
@@ -40,7 +39,7 @@
 
 
   }
-}
+
 
 #body{
   ///pricefilter
@@ -69,7 +68,7 @@
           height: 5vw;
           width: 5vw;
         }
-        #itemsearch{
+        #itemsearch,#itemsearch2{
           font-weight: lighter;
           font-size:3.8vw;
           padding: 0 0% 5% 6vw;
@@ -80,7 +79,7 @@
           height: 6vw;
           width: 6vw;
           margin-top: -8.5%;
-          margin-left: 49%;
+          margin-left: 45.5%;
         }
       }
   //result
@@ -90,4 +89,5 @@
         height: 5vw;
       }
     }
+}
 }

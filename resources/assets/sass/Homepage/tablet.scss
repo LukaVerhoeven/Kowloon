@@ -18,6 +18,7 @@
     .catergory-content{
       a{
         height: 80%;
+        background-size: 600%;
         p{
           font-size: 1.5vw;
         }
@@ -33,8 +34,8 @@
           height: 17vw;
         }
         .overlay{
-          margin-top: -57.4%;
-          height: 9.6vw;
+          margin-top: -66.4%;
+          height: 12.2vw;
         }
         .corner{
           height: 21vw;
@@ -44,7 +45,7 @@
           }
         }
         .stack{
-          height: 19.5vw;
+          height: 19.2vw;
           width: 24.7vw;
           margin-top: -75.2%;
           .img-overflow{
@@ -82,6 +83,45 @@
           margin-top: 6%;
         }
       }
+    }
+    .dog-content{
+      background-position: 59% 68%;
+      // &:hover{
+      //   background-position: 28.8% 41.6%;
+      //   background-size: 950%;
+      // }
+    }
+    .cat-content{
+      background-position: 78% 68%;
+      // &:hover{
+      //   background-position: 85.3% 41.4%;
+      //   background-size: 960%;
+      // }
+    }
+    .fish-content{
+      background-position: 39% 68%;
+
+      // &:hover{
+      //   background-position: 57.6% 41.5%;
+      //   background-size: 915%;
+      // }
+    }
+    .bird-content{
+      background-position: 98% 68%;
+      // &:hover{
+      //   background-position: 71.5% 41.4%;
+      //   background-size: 708%;
+      // }
+    }
+    .rat-content{
+      background-position: 19% 68%;
+      // &:hover{
+      //   background-position: 42.8% 40.8%;
+      //   background-size: 849%;
+      // }
+    }
+    .other-content{
+      background-position: 118% 68%;
     }
 
   }

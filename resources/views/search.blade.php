@@ -32,7 +32,7 @@
     <a href="#"></a>
   </div>
   <div class="searchdiv">
-      <label for="itemsearch"></label>
+      <label for="itemsearch2"></label>
       <input type="text" name="searchbar" value="" id="itemsearch2" placeholder="Just start typing and hit      to search">
       <i class="icon-enter"></i>
   </div>

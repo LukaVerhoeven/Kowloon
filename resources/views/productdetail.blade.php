@@ -9,7 +9,7 @@
 
   @endsection
   @section('content')
-
+@section('active', 'active-dog')
 
     <div class="content productdetail">
 
@@ -44,7 +44,7 @@
           </div>
           <div class="smalltile">
             <div class="img-overflow">
-              <img src="/img/products/product1.jpg" alt="big image of a dog on a cooling mat">
+              <img src="/img/products/product2.jpg" alt="big image of a dog on a cooling mat">
             </div>
               <span class="tile-overlay "></span>
               <p class="no-mobile">woordje tekst</p>
@@ -148,7 +148,7 @@
       <div class="FAQ">
         <h1>FREQUENTLY ASKED QUESTIONS</h1>
         <div class="question">
-          <button class="filter">Dit is een vraag</button>
+          <button class="filter point-right">Dit is een vraag</button>
           <div class="filterdiv closed">
             <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
           </div>
@@ -159,8 +159,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
           </div>
         </div>
-        <div class="question">
-          <button class="filter">Dit is een vraag</button>
+        <div class="question point-right">
+          <button class="filter point-right">Dit is een vraag</button>
           <div class="filterdiv closed">
             <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
           </div>

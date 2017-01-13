@@ -25,6 +25,25 @@
       @extend %fullwidth;
       @extend %alignleft;
     }
+    button:after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      margin-top: -1.5%;
+      border-color: white transparent transparent transparent;
+      right: 11vw;
+      border-width: 1vw 0.8vw;
+    }
+    button.point-right:after{
+      border-color:  transparent transparent  transparent white;
+      border-width: 0.8vw  1vw;
+      right: 10.4vw;
+      margin-top: -2%;
+    }
+
     .filter{
       @extend %floatleft;
     }
@@ -37,5 +56,8 @@
         margin-top: 0px;
       }
     }
+  }
+  .icon-enter{
+    margin-left: 42%;
   }
 }

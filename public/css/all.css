@@ -8,11 +8,11 @@
   src: url("/fonts/3290DE_0_0.eot") format("eot"), url("/fonts/3290DE_0_0.ttf") format("ttf"), url("/fonts/3290DE_0_0.woff") format("woff"), url("/fonts/3290DE_0_0.woff2") format("woff2");
 }
 
-.content, .sidebar {
+.content, .full-sidebar, .sidebar {
   position: relative;
 }
 
-.full-sidebar, .sidebar:last-child, .kowloon-menu, .hamburger, .catergory-content li .cathegory-line, .hot-item-list .stack-list .stack .stack-icon, .item-colors, .price-input span, .productdetail .product .imgview .bigtile .plus-icon, .productdetail .product .imgview .smalltile .tile-overlay, .productdetail .other-products .item-slider .prev, .productdetail .other-products .item-slider .next, .searchdiv label, .searchdiv .icon-enter, .cookie .dogbone {
+.sidebar:last-child, .kowloon-menu, .hamburger, .catergory-content li .cathegory-line, .hot-item-list .stack-list .stack .stack-icon, .item-colors, .price-input span, .productdetail .product .imgview .bigtile .plus-icon, .productdetail .product .imgview .smalltile .tile-overlay, .productdetail .other-products .item-slider .prev, .productdetail .other-products .item-slider .next, .searchdiv label, .searchdiv .icon-enter, .cookie .dogbone {
   position: absolute;
 }
 
@@ -20,7 +20,7 @@
   display: block;
 }
 
-.content, .full-sidebar p, .sidebar a, .catergory-content, .catergory-content li .cathegory-line, .hot-items, .hot-item-list, .hot-item-list li, .newsletter, nav, .filterdiv .checkboxlist, .filterdiv .checkboxlist .checkbox, .filterdiv #slider, .filterdiv #slider2, .dash, .items .select, .items .select ul li, .items .select ul li a, .items .amountitems, .items .bigitem, .items .bigitem .bigtext .prijs, .productdetail .product, .productdetail .product .imgview, .productdetail .product .imgview .smalltile, .productdetail .product .product-info, .item-colors, .item-colors a, .FAQ .question, .FAQ .question .filterdiv, .productdetail .other-products .item-slider, .spec ul, .spec li, .about .message, .searchpage .advancedFilter .filter, .searchpage .advancedFilter .filterdiv, .searchpage .advancedFilter .filterdiv .pricefilter, .searchdiv, .resultword p {
+.content, .full-sidebar, .full-sidebar p, .sidebar a, .catergory-content, .catergory-content li .cathegory-line, .hot-items, .hot-item-list, .hot-item-list li, .newsletter, nav, .filterdiv .checkboxlist, .filterdiv .checkboxlist .checkbox, .filterdiv #slider, .filterdiv #slider2, .dash, .items .select, .items .select ul li, .items .select ul li a, .items .amountitems, .items .bigitem, .items .bigitem .bigtext .prijs, .productdetail .product, .productdetail .product .imgview, .productdetail .product .imgview .smalltile, .productdetail .product .product-info, .item-colors, .item-colors a, .FAQ .question, .FAQ .question .filterdiv, .productdetail .other-products .item-slider, .spec ul, .spec li, .about .message, .searchpage .advancedFilter .filter, .searchpage .advancedFilter .filterdiv, .searchpage .advancedFilter .filterdiv .pricefilter, .searchdiv, .resultword p {
   display: inline-block;
 }
 
@@ -57,7 +57,7 @@ body, .sidebar a, .sidebar:last-child, .menu, .search, .about-icon, .ask, .dog, 
   height: 4vw;
 }
 
-.content div, .catergory-content li p, .hot-item-list li .overlay p, .newsletter div.news-img h2, .newsletter div.news-img h4, .productview ul.hot-item-list .overlay {
+.content div, .content .text p, .text p, .catergory-content li p, .hot-item-list li .overlay p, .newsletter div.news-img h2, .newsletter div.news-img h4, .productview ul.hot-item-list .overlay {
   text-align: center;
 }
 
@@ -77,7 +77,7 @@ h1, .link, .content div, .full-sidebar ul p, .catergory-content li p, .hot-items
   color: black;
 }
 
-.menu, .search, .about-icon, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .catergory-content li a, .hot-item-list li, .newsletter div.news-img, .productdetail .other-products .item-slider .prev, .productdetail .other-products .item-slider .next {
+.menu, .search, .about-icon, .ask, .dog, .cat, .fish, .bird, .rats, .kowloon-menu, .hot-item-list li, .newsletter div.news-img, .productdetail .other-products .item-slider .prev, .productdetail .other-products .item-slider .next {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -174,9 +174,19 @@ h1 {
   color: #cecece;
 }
 
+.content .text p {
+  line-height: 1.7vw;
+}
+
 .full-sidebar {
+  margin-left: -5%;
   width: 17.1169176262%;
   z-index: 20;
+}
+
+.full-sidebar .sidebar {
+  width: 17vw;
+  margin-left: 5%;
 }
 
 .full-sidebar p {
@@ -199,10 +209,11 @@ h1 {
 }
 
 .sidebar li.full-kowloon {
-  background-image: url("/img/Kowloon.png");
+  background-image: url("/img/kowloons.png");
+  background-position: 40.5% 60%;
+  background-size: 138%;
   width: 80%;
   margin: 0% 10% 0% 10%;
-  background-size: 100%;
 }
 
 .sidebar .line {
@@ -213,53 +224,88 @@ h1 {
 }
 
 .menu {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 100%;
+  background-image: url("/img/icons.png");
+  background-position: 100% 41%;
+  background-size: 787%;
 }
 
 .search {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 14.28%;
+  background-image: url("/img/icons.png");
+  background-position: 14% 41%;
+  background-size: 772%;
 }
 
 .about-icon {
   background-image: url("/img/icons.png");
-  background-position: 56.28% 20%;
+  background-position: 71.5% 17%;
   background-size: 667%;
 }
 
 .ask {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 0%;
+  background-image: url("/img/icons.png");
+  background-position: 0% 41%;
+  background-size: 772%;
 }
 
 .dog {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 28.57%;
+  background-image: url("/img/icons.png");
+  background-position: 28% 41%;
+  background-size: 772%;
+}
+
+.dog.active-dog, .dog:hover {
+  background-position: 59.2% 71%;
+  background-size: 508%;
 }
 
 .cat {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 85.72%;
+  background-image: url("/img/icons.png");
+  background-position: 85.5% 41%;
+  background-size: 772%;
+}
+
+.cat:hover, .cat.active-cat {
+  background-position: 77.8% 70.8%;
+  background-size: 508%;
 }
 
 .fish {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 57.12%;
+  background-image: url("/img/icons.png");
+  background-position: 57% 41%;
+  background-size: 772%;
+}
+
+.fish:hover, .fish.active-fish {
+  background-position: 37.4% 70.5%;
+  background-size: 526%;
 }
 
 .bird {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 71.68%;
+  background-image: url("/img/icons.png");
+  background-position: 71% 41%;
+  background-size: 772%;
+}
+
+.bird:hover, .bird.fish-bird {
+  background-position: 97.2% 68.5%;
+  background-size: 680%;
 }
 
 .rats {
-  background-image: url("/img/menu-sprite.png");
-  background-position: 42.84%;
+  background-image: url("/img/icons.png");
+  background-position: 42.5% 41%;
+  background-size: 772%;
+}
+
+.rats:hover, .rats.active-rats {
+  background-position: 17.8% 71%;
+  background-size: 570%;
 }
 
 .kowloon-menu {
-  background-image: url("/img/K-grey.png");
+  background-image: url("/img/kowloons.png");
+  background-position: -10.5% 114%;
+  background-size: 302%;
   bottom: 0px;
 }
 
@@ -302,8 +348,9 @@ h1 {
 }
 
 .catergory-content li a {
-  height: 62%;
-  background-image: url("/img/homepagesprite.png");
+  background-image: url("/img/icons.png");
+  height: 80%;
+  background-size: 420%;
 }
 
 .catergory-content li img {
@@ -336,27 +383,48 @@ h1 {
 }
 
 .dog-content {
-  background-position: 62%;
+  background-position: 60% 70%;
+}
+
+.dog-content:hover {
+  background-position: 60% 101.4%;
 }
 
 .cat-content {
-  background-position: 82%;
+  background-position: 81% 70%;
+}
+
+.cat-content:hover {
+  background-position: 81% 101.4%;
 }
 
 .fish-content {
-  background-position: 39%;
+  background-position: 37% 70%;
+}
+
+.fish-content:hover {
+  background-position: 37% 101.4%;
 }
 
 .bird-content {
-  background-position: 104%;
+  background-position: 103% 70%;
+}
+
+.bird-content:hover {
+  background-position: 103% 101.4%;
 }
 
 .rat-content {
-  background-position: 17%;
+  background-position: 16% 70%;
+}
+
+.rat-content:hover {
+  background-position: 16% 101.4%;
+  background-repeat: no-repeat;
 }
 
 .other-content {
-  background-position: -4%;
+  background-position: 126% 71%;
 }
 
 .hot-items {
@@ -592,11 +660,15 @@ nav a:first-of-type {
   width: 5.2%;
 }
 
+nav a:hover .circle {
+  background: #ff6f9e;
+}
+
 nav .circle {
   margin: 6.8% 8% 3% 2%;
   width: 0.7vw;
   height: 0.7vw;
-  background: #ff6f9e;
+  background: white;
   border-radius: 60%;
 }
 
@@ -736,6 +808,11 @@ nav .triangle {
 
 .productview {
   padding-top: 2%;
+}
+
+.productview .stack-list .stack .overlay {
+  margin-top: -67.5%;
+  height: 56.5%;
 }
 
 .productview .hot-items {
@@ -1211,6 +1288,26 @@ nav .triangle {
   margin-bottom: 1%;
 }
 
+.FAQ .question button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -1.5%;
+  border-color: white transparent transparent transparent;
+  right: 11vw;
+  border-width: 1vw 0.8vw;
+}
+
+.FAQ .question button.point-right:after {
+  border-color: transparent transparent  transparent white;
+  border-width: 0.8vw  1vw;
+  right: 10.4vw;
+  margin-top: -2%;
+}
+
 .FAQ .question .filterdiv {
   margin: 0px 0px 0px 49px;
 }
@@ -1218,6 +1315,10 @@ nav .triangle {
 .FAQ .question .filterdiv p {
   font-size: 0.9vw;
   margin-top: 0px;
+}
+
+.FAQ .icon-enter {
+  margin-left: 42%;
 }
 
 .productdetail .other-products h1 {
@@ -1351,17 +1452,31 @@ nav .triangle {
   font-size: 0.9vw;
 }
 
+.about .message label, .about .message input {
+  font-size: 1.2vw;
+  margin-bottom: 1%;
+}
+
 .about .message input, .about .message textarea {
   padding: 10px;
   border: 1px solid #9a9a9a;
   margin-bottom: 25px;
 }
 
+.about .message textarea {
+  font-size: 1.2vw;
+  width: 65%;
+}
+
 .about .message .formsubmit {
   border: 0px;
-  padding: 10px 7% 10px 7%;
+  padding: 10px 10% 10px 10%;
   font-weight: bold;
   background-color: #ff6f9e;
+}
+
+.about .FAQ button {
+  font-size: 1.3vw;
 }
 
 .searchpage, .FAQ-page {
@@ -1579,8 +1694,8 @@ nav .triangle {
 
 .cookie .dogbone {
   background-image: url("/img/icons.png");
-  background-position: -1% 100%;
-  background-size: 467% 471%;
+  background-position: 29% 18%;
+  background-size: 479% 499%;
   height: 9vw;
   width: 14vw;
   margin-left: 28%;
@@ -1640,6 +1755,11 @@ nav .triangle {
   }
   .full-sidebar {
     width: 32%;
+    margin-left: -2%;
+  }
+  .full-sidebar .sidebar {
+    width: 32vw;
+    margin-left: 6%;
   }
   .full-sidebar .sidebar:last-child i {
     width: 22%;
@@ -1689,6 +1809,7 @@ nav .triangle {
   }
   .content .catergory-content a {
     height: 80%;
+    background-size: 600%;
   }
   .content .catergory-content a p {
     font-size: 1.5vw;
@@ -1704,8 +1825,8 @@ nav .triangle {
     height: 17vw;
   }
   .content .hot-item-list li .overlay {
-    margin-top: -57.4%;
-    height: 9.6vw;
+    margin-top: -66.4%;
+    height: 12.2vw;
   }
   .content .hot-item-list li .corner {
     height: 21vw;
@@ -1715,7 +1836,7 @@ nav .triangle {
     margin-top: 1.5%;
   }
   .content .hot-item-list li .stack {
-    height: 19.5vw;
+    height: 19.2vw;
     width: 24.7vw;
     margin-top: -75.2%;
   }
@@ -1751,6 +1872,24 @@ nav .triangle {
   .content .newsletter .news-form h3 {
     margin-top: 6%;
   }
+  .content .dog-content {
+    background-position: 59% 68%;
+  }
+  .content .cat-content {
+    background-position: 78% 68%;
+  }
+  .content .fish-content {
+    background-position: 39% 68%;
+  }
+  .content .bird-content {
+    background-position: 98% 68%;
+  }
+  .content .rat-content {
+    background-position: 19% 68%;
+  }
+  .content .other-content {
+    background-position: 118% 68%;
+  }
   .hot-items h1 {
     font-size: 3.9vw;
   }
@@ -1758,10 +1897,11 @@ nav .triangle {
 
 @media (min-width: 415px) and (max-width: 1025px) {
   .cookie .dogbone {
-    height: 12vw;
-    width: 18vw;
+    height: 14vw;
+    width: 21vw;
     margin-left: 20%;
     margin-top: 12%;
+    background-position: 34% 19%;
   }
   .cookie .popup-cookie {
     width: 37%;
@@ -1780,6 +1920,9 @@ nav .triangle {
     width: 93.3%;
     margin-left: -93.3%;
   }
+  .searchpage .escbar, .FAQ-page .escbar {
+    width: 6%;
+  }
   #body .searchpage h3 {
     font-size: 2.6vw;
   }
@@ -1789,14 +1932,8 @@ nav .triangle {
   #body .searchpage .advancedFilter {
     width: 84%;
   }
-  #body .searchpage .escbar {
-    width: 6%;
-  }
-  #body .searchpage .escbar a {
-    background-size: 1847% 961%;
-  }
   #body .searchpage .filterdiv {
-    max-height: 40vw;
+    max-height: 27vw;
   }
   #body .searchpage .filterdiv .checkboxlist {
     width: 70vw;
@@ -1808,50 +1945,42 @@ nav .triangle {
     height: 2vw;
     width: 2.2vw;
   }
-}
-
-#body .pricefilter {
-  margin-left: 5%;
-  width: 70%;
-}
-
-#body .pricefilter .price-input input {
-  width: 15vw;
-  height: 5vw;
-  margin-top: -2%;
-}
-
-#body .pricefilter .price-input span {
-  font-size: 2.1vw;
-  margin-top: 1.2%;
-}
-
-#body .pricefilter .dash {
-  padding: 1vw 6vw 0vw 6vw;
-}
-
-#body .searchdiv label {
-  height: 5vw;
-  width: 5vw;
-}
-
-#body .searchdiv #itemsearch {
-  font-weight: lighter;
-  font-size: 3.8vw;
-  padding: 0 0% 5% 6vw;
-  width: 97%;
-}
-
-#body .searchdiv .icon-enter {
-  height: 6vw;
-  width: 6vw;
-  margin-top: -8.5%;
-  margin-left: 49%;
-}
-
-#body .resultword .cross {
-  width: 5vw;
-  height: 5vw;
+  #body .pricefilter {
+    margin-left: 5%;
+    width: 70%;
+  }
+  #body .pricefilter .price-input input {
+    width: 15vw;
+    height: 5vw;
+    margin-top: -2%;
+  }
+  #body .pricefilter .price-input span {
+    font-size: 2.1vw;
+    margin-top: 1.2%;
+  }
+  #body .pricefilter .dash {
+    padding: 1vw 6vw 0vw 6vw;
+  }
+  #body .searchdiv label {
+    height: 5vw;
+    width: 5vw;
+  }
+  #body .searchdiv #itemsearch, #body .searchdiv #itemsearch2 {
+    font-weight: lighter;
+    font-size: 3.8vw;
+    padding: 0 0% 5% 6vw;
+    width: 97%;
+  }
+  #body .searchdiv .icon-enter {
+    height: 6vw;
+    width: 6vw;
+    margin-top: -8.5%;
+    margin-left: 45.5%;
+  }
+  #body .resultword .cross {
+    width: 5vw;
+    height: 5vw;
+  }
 }
 
 @media (min-width: 415px) and (max-width: 1025px) {
@@ -1912,6 +2041,9 @@ nav .triangle {
   #body .productview .filterdiv .price-input {
     margin-bottom: 3%;
   }
+  #body .productview .checkboxlist:first-of-type label:before {
+    margin-top: 0px;
+  }
   #body .productview .checkboxlist label:before {
     margin: 5.5% 0.8vw 0px 0;
   }
@@ -1956,6 +2088,9 @@ nav .triangle {
   }
   #body .productdetail h1 {
     font-size: 3vw;
+  }
+  #body .productdetail nav {
+    margin-bottom: 8%;
   }
   #body .productdetail .product {
     display: inline-block;
@@ -2020,6 +2155,12 @@ nav .triangle {
   #body .productdetail .hot-item-list li {
     margin-right: 0.5vw;
   }
+  #body .productdetail button:after {
+    right: 6vw;
+  }
+  #body .productdetail button.point-right:after {
+    right: 5.4vw;
+  }
 }
 
 @media (min-width: 415px) and (max-width: 1025px) {
@@ -2068,6 +2209,10 @@ nav .triangle {
   #body .full-sidebar {
     width: 60%;
   }
+  #body .full-sidebar .sidebar {
+    width: 60vw;
+    margin-left: 100%;
+  }
   #body .sidebar li {
     height: 14vw;
   }
@@ -2110,6 +2255,9 @@ nav .triangle {
   #body .content .text {
     margin: 0px;
   }
+  #body .content .text P {
+    line-height: 3.5vw;
+  }
   #body .content .catergory-content {
     height: 100%;
     display: inline-block;
@@ -2130,6 +2278,9 @@ nav .triangle {
   #body .content .catergory-content li .cathegory-line {
     margin-top: 6%;
     height: 13%;
+  }
+  #body .content .hot-items {
+    overflow: hidden;
   }
   #body .content .hot-mobile {
     height: 25vw;
@@ -2163,6 +2314,24 @@ nav .triangle {
   #body .newsletter .news-form {
     height: 45vw;
     width: 97%;
+  }
+  #body .dog-content {
+    background-position: 60% 70%;
+  }
+  #body .cat-content {
+    background-position: 81% 70%;
+  }
+  #body .fish-content {
+    background-position: 37% 70%;
+  }
+  #body .bird-content {
+    background-position: 103% 70%;
+  }
+  #body .rat-content {
+    background-position: 16% 70%;
+  }
+  #body .other-content {
+    background-position: 126% 71%;
   }
 }
 
@@ -2239,7 +2408,7 @@ nav .triangle {
     margin-bottom: 10%;
   }
   #body .filterdiv .dash {
-    padding-top: 5vw;
+    padding: 3vw 8vw;
   }
   #body .items .select {
     margin: 5% 0px;
@@ -2266,7 +2435,7 @@ nav .triangle {
   }
   #body .productview .hot-item-list li .overlay {
     height: 46vw;
-    margin-top: -71.5%;
+    margin-top: -68.5%;
   }
   #body .productview .hot-item-list li .overlay .product-icon {
     height: 30vw;
@@ -2289,12 +2458,18 @@ nav .triangle {
   }
   #body .productview .hot-item-list li .stack {
     height: 72vw;
-    margin-top: -81.9%;
-    width: 84vw;
+    margin-top: -77.5%;
+    width: 88vw;
+  }
+  #body .productview .hot-item-list li .stack .stack-icon {
+    width: 11vw;
+    height: 11vw;
+    margin-left: 1.5%;
+    margin-top: 1.5%;
   }
   #body .productview .hot-item-list li .stack .overlay {
-    height: 47vw;
-    margin-top: -76.5%;
+    height: 46vw;
+    margin-top: -72.2%;
   }
   #body .productview .hot-item-list #result_wrapper {
     width: 89vw;
@@ -2417,6 +2592,16 @@ nav .triangle {
   #body .FAQ .question button {
     padding: 3% 0px;
   }
+  #body .FAQ .question button:after {
+    margin-top: -4.5%;
+    right: 6vw;
+    border-width: 2vw 1.8vw;
+  }
+  #body .FAQ .question button.point-right:after {
+    border-width: 1.8vw 2vw;
+    right: 5.4vw;
+    margin-top: -5%;
+  }
   #body .FAQ .question p {
     margin-top: 3%;
   }
@@ -2463,16 +2648,19 @@ nav .triangle {
   #body .searchpage .advancedFilter .filterdiv .checkboxlist, #body .searchpage .advancedFilter .filterdiv .pricefilter {
     width: 100%;
   }
+  #body .searchpage .advancedFilter .filterdiv .pricefilter {
+    margin-left: 0%;
+  }
   #body .searchpage .advancedFilter .filterdiv .slider {
-    width: 86%;
+    width: 93%;
   }
   #body .searchpage .advancedFilter .filterdiv .price-input input {
-    width: 13vw;
+    width: 14vw;
     margin-bottom: 20%;
   }
   #body .escbar {
     width: 15%;
-    height: 5%;
+    height: 4%;
   }
   #body .escbar a {
     background-position: 91% 2%;
@@ -2485,12 +2673,14 @@ nav .triangle {
     width: 4vw;
     height: 4vw;
   }
-  #body .searchdiv #itemsearch {
+  #body .searchdiv #itemsearch, #body .searchdiv #itemsearch2 {
     font-size: 4vw;
   }
   #body .searchdiv .icon-enter {
-    margin-top: -6.5%;
-    margin-left: 52%;
+    margin-top: -4.5%;
+    margin-left: 50%;
+    height: 4vw;
+    width: 4vw;
     background-position: 69% -1.2%;
     background-size: 837% 491%;
   }
@@ -2510,6 +2700,9 @@ nav .triangle {
   #body .FAQ-page .results .result-item {
     display: inline-block;
     height: 100%;
+  }
+  #body .searchdiv .icon-enter {
+    margin-left: 42%;
   }
 }
 

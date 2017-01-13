@@ -16,7 +16,7 @@
     <div class="content about">
       <nav>
         <img src="img/white-k.png" alt="the k of the kownloon logo">
-        <span class="triangle"></span><a href="#">about us</a>
+        <span class="triangle"></span><a href="/">about us</a>
       </nav>
       <h1>ABOUT US</h1>
       <div class="kowloon">
@@ -48,9 +48,9 @@
         <div class="FAQ">
           <h2>FREQUENTLY ASKED QUESTIONS</h2>
           <div class="question">
-            <button class="filter">Dit is een vraag</button>
+            <button class="filter point-right">Dit is een vraag</button>
             <div class="filterdiv closed">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+              <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
             </div>
           </div>
           <div class="question">
@@ -60,9 +60,9 @@
             </div>
           </div>
           <div class="question">
-            <button class="filter">Dit is een vraag</button>
+            <button class="filter point-right">Dit is een vraag</button>
             <div class="filterdiv closed">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+              <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
             </div>
           </div>
 

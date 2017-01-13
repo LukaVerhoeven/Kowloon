@@ -15,6 +15,11 @@
   }
   .full-sidebar{
     width: 32%;
+    margin-left: -2%;
+    .sidebar{
+      width: 32vw;
+      margin-left: 6%;
+    }
 
     .sidebar:last-child i {
       width: 22%;

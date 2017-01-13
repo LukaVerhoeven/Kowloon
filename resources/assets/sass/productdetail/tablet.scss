@@ -13,6 +13,9 @@
     h1{
       font-size: 3vw;
     }
+    nav{
+        margin-bottom: 8%;
+    }
 //imgview
     .product{
       display: inline-block;
@@ -79,6 +82,14 @@
       li{
         margin-right: 0.5vw;
       }
+    }
+    button:after{
+
+      right: 6vw;
+    }
+    button.point-right:after{
+
+      right: 5.4vw;
     }
   }
 }

@@ -30,6 +30,9 @@
       width: 93%;
       .text{
         margin: 0px;
+        P{
+          line-height: 3.5vw;
+        }
       }
 //cathegory
       .catergory-content{
@@ -54,6 +57,10 @@
         }
       }
   //hot-item-list
+  .hot-items{
+    overflow: hidden;
+
+  }
       .hot-mobile{
         height: 25vw;
         width: 150%;
@@ -88,6 +95,24 @@
       height: 45vw;
       width: 97%;
     }
+  }
+  .dog-content{
+  background-position: 60% 70%;
+  }
+  .cat-content{
+    background-position: 81% 70%;
+  }
+  .fish-content{
+    background-position: 37% 70%;
+  }
+  .bird-content{
+    background-position: 103% 70%;
+  }
+  .rat-content{
+    background-position: 16% 70%;
+  }
+  .other-content{
+    background-position: 126% 71%;
   }
 
 

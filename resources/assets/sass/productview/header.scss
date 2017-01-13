@@ -27,13 +27,16 @@ nav{
       padding-left: 0.2%;
       width: 5.2%;
     }
+    &:hover .circle{
+      background: $dog-color;
+    }
   }
   .circle{
     @extend %block;
     margin: 6.8% 8% 3% 2%;
     width: 0.7vw;
     height: 0.7vw;
-    background: $dog-color;
+    background: white;
     -moz-border-radius: 60%;
     -webkit-border-radius: 60%;
     border-radius: 60%;
@@ -190,6 +193,10 @@ nav{
   }
   ul.hot-item-list .overlay{
     @extend %centertext;
+  }
+  .stack-list .stack .overlay{
+    margin-top: -67.5%;
+    height: 56.5%;
   }
   .hot-items{
     height: 100%;

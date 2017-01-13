@@ -73,17 +73,18 @@ $dog-color: #ff6f9e;
 
 //img
 $header-img: url("/img/hond.png");
-$menu-sprite-img: url("/img/menu-sprite.png");
-$homepage-sprite-img: url("/img/homepagesprite.png");
-$menu-burger-position: 100%;
-$menu-search-position: 14.28%;
-$menu-ask-position: 0%;
-$menu-dog-position: 28.57%;
-$menu-cat-position: 85.72%;
-$menu-fish-position: 57.12%;
-$menu-bird-position: 71.68%;
+$kowloons: url("/img/kowloons.png");
+// $menu-sprite-img: url("/img/menu-sprite.png");
+// $homepage-sprite-img: url("/img/homepagesprite.png");
+// $menu-burger-position: 100%;
+// $menu-search-position: 14.28%;
+// $menu-ask-position: 0%;
+// $menu-dog-position: 28.57%;
+// $menu-cat-position: 85.72%;
+// $menu-fish-position: 57.12%;
+// $menu-bird-position: 71.68%;
+// $menu-rat-position: 42.84%;
 
-$menu-rat-position: 42.84%;
 $menu-k-grey-img:  url("/img/K-grey.png");
 $menu-kowloon-grey-img: url("/img/Kowloon.png");
 $newsletter-image: url("/img/add-bg.jpg");
@@ -112,7 +113,6 @@ $heights: (
 sidebar-line: 0px,
 cathegory-line: 9%,
 cathegory-height:11vw,
-cathegory-link: 62%,
 hot-item:15vw,
 hot-item-img: 80%,
 newsletter:14vw,
@@ -231,6 +231,10 @@ h1{
   }
   .text p , .icons p{
     color: $content-textcolor;
+  }
+  .text p {
+      @extend %centertext;
+      line-height: 1.7vw;
   }
 }
 /////////// ul /////////////////

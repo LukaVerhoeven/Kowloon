@@ -10,12 +10,12 @@ function fullsidebar() {
 }
 
 //sidebar fix
-var pageheight = $('body').height()
-  $('.full-sidebar').css('height', pageheight);
-$( window ).resize(function() {
-  var pageheight = $('body').height()
-    $('.full-sidebar').css('height', pageheight);
-});
+// var pageheight = $('body').height();
+//   $('.full-sidebar').css('height', pageheight);
+// $( window ).resize(function() {
+//   var pageheight = $('body').height();
+//     $('.full-sidebar').css('height', pageheight);
+// });
 
 //open searchmenu & FAQ menu
 $('.escbar a').click(function () {
